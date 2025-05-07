@@ -1,18 +1,5 @@
-// This file contains the real water consumption data for the Muscat Bay Water System
-
-export interface WaterMeter {
-  Label: string
-  "Meter Label": string
-  "Acct #": string
-  Zone: string
-  Type: string
-  "Parent Meter": string
-  [key: string]: any // For monthly readings like "Jan-25", "Feb-25", etc.
-}
-
-// Real water consumption data
-export const realWaterData: WaterMeter[] = [
-  // L1 Main Bulk meter (NAMA)
+export const realWaterData = [
+  // L1 Main Bulk meter
   {
     Label: "L1",
     "Meter Label": "Main Bulk (NAMA)",
@@ -20,6 +7,9 @@ export const realWaterData: WaterMeter[] = [
     Zone: "Main Bulk",
     Type: "Bulk",
     "Parent Meter": "",
+    "Jan-25": 32580,
+    "Feb-25": 44043,
+    "Mar-25": 34915,
     "Jan-24": 32803,
     "Feb-24": 27996,
     "Mar-24": 23860,
@@ -32,12 +22,9 @@ export const realWaterData: WaterMeter[] = [
     "Oct-24": 31519,
     "Nov-24": 35290,
     "Dec-24": 36733,
-    "Jan-25": 32580,
-    "Feb-25": 44043,
-    "Mar-25": 34915,
   },
 
-  // Zone 01 (FM) Bulk meter
+  // Zone FM (Zone 01) Bulk meter
   {
     Label: "L2",
     "Meter Label": "ZONE FM ( BULK ZONE FM )",
@@ -45,6 +32,9 @@ export const realWaterData: WaterMeter[] = [
     Zone: "Zone_01",
     Type: "Bulk",
     "Parent Meter": "Main Bulk (NAMA)",
+    "Jan-25": 2008,
+    "Feb-25": 1740,
+    "Mar-25": 1880,
     "Jan-24": 1595,
     "Feb-24": 1283,
     "Mar-24": 1255,
@@ -57,9 +47,6 @@ export const realWaterData: WaterMeter[] = [
     "Oct-24": 2098,
     "Nov-24": 1808,
     "Dec-24": 1946,
-    "Jan-25": 2008,
-    "Feb-25": 1740,
-    "Mar-25": 1880,
   },
 
   // Zone 3A Bulk meter
@@ -70,6 +57,9 @@ export const realWaterData: WaterMeter[] = [
     Zone: "Zone_03A",
     Type: "Bulk",
     "Parent Meter": "Main Bulk (NAMA)",
+    "Jan-25": 4235,
+    "Feb-25": 4273,
+    "Mar-25": 3591,
     "Jan-24": 1234,
     "Feb-24": 1099,
     "Mar-24": 1297,
@@ -82,9 +72,6 @@ export const realWaterData: WaterMeter[] = [
     "Oct-24": 3715,
     "Nov-24": 3501,
     "Dec-24": 3796,
-    "Jan-25": 4235,
-    "Feb-25": 4273,
-    "Mar-25": 3591,
   },
 
   // Zone 3B Bulk meter
@@ -95,6 +82,9 @@ export const realWaterData: WaterMeter[] = [
     Zone: "Zone_03B",
     Type: "Bulk",
     "Parent Meter": "Main Bulk (NAMA)",
+    "Jan-25": 3256,
+    "Feb-25": 2962,
+    "Mar-25": 3331,
     "Jan-24": 2653,
     "Feb-24": 2169,
     "Mar-24": 2315,
@@ -107,9 +97,6 @@ export const realWaterData: WaterMeter[] = [
     "Oct-24": 2906,
     "Nov-24": 2695,
     "Dec-24": 3583,
-    "Jan-25": 3256,
-    "Feb-25": 2962,
-    "Mar-25": 3331,
   },
 
   // Zone 5 Bulk meter
@@ -120,6 +107,9 @@ export const realWaterData: WaterMeter[] = [
     Zone: "Zone_05",
     Type: "Bulk",
     "Parent Meter": "Main Bulk (NAMA)",
+    "Jan-25": 4267,
+    "Feb-25": 4231,
+    "Mar-25": 3862,
     "Jan-24": 4286,
     "Feb-24": 3897,
     "Mar-24": 4127,
@@ -132,177 +122,9 @@ export const realWaterData: WaterMeter[] = [
     "Oct-24": 3383,
     "Nov-24": 1438,
     "Dec-24": 3788,
-    "Jan-25": 4267,
-    "Feb-25": 4231,
-    "Mar-25": 3862,
   },
 
-  // Zone 8 Bulk meter
-  {
-    Label: "L2",
-    "Meter Label": "ZONE 8 (Bulk Zone 8)",
-    "Acct #": "4300342",
-    Zone: "Zone_08",
-    Type: "Bulk",
-    "Parent Meter": "Main Bulk (NAMA)",
-    "Jan-24": 2170,
-    "Feb-24": 1825,
-    "Mar-24": 2021,
-    "Apr-24": 2753,
-    "May-24": 2722,
-    "Jun-24": 3193,
-    "Jul-24": 3639,
-    "Aug-24": 3957,
-    "Sep-24": 3947,
-    "Oct-24": 4296,
-    "Nov-24": 3569,
-    "Dec-24": 3018,
-    "Jan-25": 1547,
-    "Feb-25": 1498,
-    "Mar-25": 2605,
-  },
-
-  // Village Square Bulk meter
-  {
-    Label: "L2",
-    "Meter Label": "Village Square (Zone Bulk)",
-    "Acct #": "4300335",
-    Zone: "Zone_VS",
-    Type: "Bulk",
-    "Parent Meter": "Main Bulk (NAMA)",
-    "Jan-24": 26,
-    "Feb-24": 19,
-    "Mar-24": 72,
-    "Apr-24": 60,
-    "May-24": 125,
-    "Jun-24": 277,
-    "Jul-24": 143,
-    "Aug-24": 137,
-    "Sep-24": 145,
-    "Oct-24": 63,
-    "Nov-24": 34,
-    "Dec-24": 17,
-    "Jan-25": 14,
-    "Feb-25": 12,
-    "Mar-25": 21,
-  },
-
-  // Direct Connection meters (DC)
-  {
-    Label: "DC",
-    "Meter Label": "Irrigation Tank 04 - (Z08)",
-    "Acct #": "4300294",
-    Zone: "Main Bulk",
-    Type: "IRR_Servies",
-    "Parent Meter": "Main Bulk (NAMA)",
-    "Jan-24": 764,
-    "Feb-24": 509,
-    "Mar-24": 440,
-    "Apr-24": 970,
-    "May-24": 1165,
-    "Jun-24": 1475,
-    "Jul-24": 782,
-    "Aug-24": 559,
-    "Sep-24": 0,
-    "Oct-24": 0,
-    "Nov-24": 0,
-    "Dec-24": 0,
-    "Jan-25": 0,
-    "Feb-25": 0,
-    "Mar-25": 0,
-  },
-  {
-    Label: "DC",
-    "Meter Label": "Sales Center Common Building",
-    "Acct #": "4300295",
-    Zone: "Main Bulk",
-    Type: "MB_Common",
-    "Parent Meter": "Main Bulk (NAMA)",
-    "Jan-24": 45,
-    "Feb-24": 46,
-    "Mar-24": 37,
-    "Apr-24": 35,
-    "May-24": 61,
-    "Jun-24": 32,
-    "Jul-24": 36,
-    "Aug-24": 28,
-    "Sep-24": 25,
-    "Oct-24": 41,
-    "Nov-24": 54,
-    "Dec-24": 62,
-    "Jan-25": 76,
-    "Feb-25": 68,
-    "Mar-25": 37,
-  },
-  {
-    Label: "DC",
-    "Meter Label": "Building (Security)",
-    "Acct #": "4300297",
-    Zone: "Main Bulk",
-    Type: "MB_Common",
-    "Parent Meter": "Main Bulk (NAMA)",
-    "Jan-24": 33,
-    "Feb-24": 31,
-    "Mar-24": 30,
-    "Apr-24": 32,
-    "May-24": 9,
-    "Jun-24": 4,
-    "Jul-24": 4,
-    "Aug-24": 4,
-    "Sep-24": 5,
-    "Oct-24": 6,
-    "Nov-24": 10,
-    "Dec-24": 17,
-    "Jan-25": 17,
-    "Feb-25": 18,
-    "Mar-25": 13,
-  },
-  {
-    Label: "DC",
-    "Meter Label": "Building (ROP)",
-    "Acct #": "4300299",
-    Zone: "Main Bulk",
-    Type: "MB_Common",
-    "Parent Meter": "Main Bulk (NAMA)",
-    "Jan-24": 38,
-    "Feb-24": 31,
-    "Mar-24": 31,
-    "Apr-24": 33,
-    "May-24": 10,
-    "Jun-24": 2,
-    "Jul-24": 3,
-    "Aug-24": 25,
-    "Sep-24": 42,
-    "Oct-24": 45,
-    "Nov-24": 25,
-    "Dec-24": 22,
-    "Jan-25": 23,
-    "Feb-25": 21,
-    "Mar-25": 19,
-  },
-  {
-    Label: "DC",
-    "Meter Label": "Irrigation Tank 01 (Inlet)",
-    "Acct #": "4300323",
-    Zone: "Main Bulk",
-    Type: "IRR_Servies",
-    "Parent Meter": "Main Bulk (NAMA)",
-    "Jan-24": 0,
-    "Feb-24": 0,
-    "Mar-24": 0,
-    "Apr-24": 0,
-    "May-24": 0,
-    "Jun-24": 0,
-    "Jul-24": 0,
-    "Aug-24": 0,
-    "Sep-24": 0,
-    "Oct-24": 0,
-    "Nov-24": 0,
-    "Dec-24": 0,
-    "Jan-25": 0,
-    "Feb-25": 0,
-    "Mar-25": 0,
-  },
+  // Direct Connection meters (sample)
   {
     Label: "DC",
     "Meter Label": "Hotel Main Building",
@@ -310,6 +132,9 @@ export const realWaterData: WaterMeter[] = [
     Zone: "Main Bulk",
     Type: "Retail",
     "Parent Meter": "Main Bulk (NAMA)",
+    "Jan-25": 18048,
+    "Feb-25": 19482,
+    "Mar-25": 22151,
     "Jan-24": 14012,
     "Feb-24": 12880,
     "Mar-24": 11222,
@@ -322,319 +147,9 @@ export const realWaterData: WaterMeter[] = [
     "Oct-24": 17688,
     "Nov-24": 15156,
     "Dec-24": 14668,
-    "Jan-25": 18048,
-    "Feb-25": 19482,
-    "Mar-25": 22151,
   },
-  {
-    Label: "DC",
-    "Meter Label": "Community Mgmt - Technical Zone, STP",
-    "Acct #": "4300336",
-    Zone: "Main Bulk",
-    Type: "MB_Common",
-    "Parent Meter": "Main Bulk (NAMA)",
-    "Jan-24": 28,
-    "Feb-24": 47,
-    "Mar-24": 34,
-    "Apr-24": 27,
-    "May-24": 24,
-    "Jun-24": 51,
-    "Jul-24": 18,
-    "Aug-24": 23,
-    "Sep-24": 22,
-    "Oct-24": 17,
-    "Nov-24": 14,
-    "Dec-24": 25,
-    "Jan-25": 29,
-    "Feb-25": 37,
-    "Mar-25": 25,
-  },
-  {
-    Label: "DC",
-    "Meter Label": "PHASE 02, MAIN ENTRANCE (Infra.)",
-    "Acct #": "4300338",
-    Zone: "Main Bulk",
-    Type: "MB_Common",
-    "Parent Meter": "Main Bulk (NAMA)",
-    "Jan-24": 34,
-    "Feb-24": 33,
-    "Mar-24": 35,
-    "Apr-24": 40,
-    "May-24": 40,
-    "Jun-24": 49,
-    "Jul-24": 24,
-    "Aug-24": 11,
-    "Sep-24": 12,
-    "Oct-24": 12,
-    "Nov-24": 12,
-    "Dec-24": 10,
-    "Jan-25": 11,
-    "Feb-25": 8,
-    "Mar-25": 6,
-  },
-  {
-    Label: "DC",
-    "Meter Label": "Irrigation- Controller UP",
-    "Acct #": "4300340",
-    Zone: "Main Bulk",
-    Type: "IRR_Servies",
-    "Parent Meter": "Main Bulk (NAMA)",
-    "Jan-24": 647,
-    "Feb-24": 297,
-    "Mar-24": 318,
-    "Apr-24": 351,
-    "May-24": 414,
-    "Jun-24": 1038,
-    "Jul-24": 1636,
-    "Aug-24": 1213,
-    "Sep-24": 1410,
-    "Oct-24": 1204,
-    "Nov-24": 124,
-    "Dec-24": 53,
-    "Jan-25": 0,
-    "Feb-25": 0,
-    "Mar-25": 0,
-  },
-  {
-    Label: "DC",
-    "Meter Label": "Irrigation- Controller DOWN",
-    "Acct #": "4300341",
-    Zone: "Main Bulk",
-    Type: "IRR_Servies",
-    "Parent Meter": "Main Bulk (NAMA)",
-    "Jan-24": 1124,
-    "Feb-24": 907,
-    "Mar-24": 773,
-    "Apr-24": 628,
-    "May-24": 601,
-    "Jun-24": 891,
-    "Jul-24": 1006,
-    "Aug-24": 742,
-    "Sep-24": 860,
-    "Oct-24": 1559,
-    "Nov-24": 171,
-    "Dec-24": 185,
-    "Jan-25": 159,
-    "Feb-25": 239,
-    "Mar-25": 283,
-  },
-  {
-    Label: "DC",
-    "Meter Label": "Al Adrak Construction",
-    "Acct #": "4300347",
-    Zone: "Main Bulk",
-    Type: "Retail",
-    "Parent Meter": "Main Bulk (NAMA)",
-    "Jan-24": 0,
-    "Feb-24": 0,
-    "Mar-24": 0,
-    "Apr-24": 0,
-    "May-24": 0,
-    "Jun-24": 0,
-    "Jul-24": 0,
-    "Aug-24": 0,
-    "Sep-24": 474,
-    "Oct-24": 1179,
-    "Nov-24": 494,
-    "Dec-24": 494,
-    "Jan-25": 597,
-    "Feb-25": 520,
-    "Mar-25": 580,
-  },
-  {
-    Label: "DC",
-    "Meter Label": "Al Adrak Camp",
-    "Acct #": "4300348",
-    Zone: "Main Bulk",
-    Type: "Retail",
-    "Parent Meter": "Main Bulk (NAMA)",
-    "Jan-24": 0,
-    "Feb-24": 0,
-    "Mar-24": 0,
-    "Apr-24": 0,
-    "May-24": 0,
-    "Jun-24": 0,
-    "Jul-24": 0,
-    "Aug-24": 0,
-    "Sep-24": 193,
-    "Oct-24": 1073,
-    "Nov-24": 808,
-    "Dec-24": 808,
-    "Jan-25": 1038,
-    "Feb-25": 702,
-    "Mar-25": 1161,
-  },
-
-  // Sample L3 meters from Zone 01
-  {
-    Label: "L3",
-    "Meter Label": "Building FM",
-    "Acct #": "4300296",
-    Zone: "Zone_01",
-    Type: "MB_Common",
-    "Parent Meter": "ZONE FM ( BULK ZONE FM )",
-    "Jan-24": 34,
-    "Feb-24": 43,
-    "Mar-24": 22,
-    "Apr-24": 18,
-    "May-24": 27,
-    "Jun-24": 22,
-    "Jul-24": 32,
-    "Aug-24": 37,
-    "Sep-24": 34,
-    "Oct-24": 45,
-    "Nov-24": 30,
-    "Dec-24": 38,
-    "Jan-25": 37,
-    "Feb-25": 39,
-    "Mar-25": 49,
-  },
-  {
-    Label: "L3",
-    "Meter Label": "Building B1",
-    "Acct #": "4300300",
-    Zone: "Zone_01",
-    Type: "Retail",
-    "Parent Meter": "ZONE FM ( BULK ZONE FM )",
-    "Jan-24": 258,
-    "Feb-24": 183,
-    "Mar-24": 178,
-    "Apr-24": 184,
-    "May-24": 198,
-    "Jun-24": 181,
-    "Jul-24": 164,
-    "Aug-24": 202,
-    "Sep-24": 184,
-    "Oct-24": 167,
-    "Nov-24": 214,
-    "Dec-24": 245,
-    "Jan-25": 228,
-    "Feb-25": 225,
-    "Mar-25": 235,
-  },
-
-  // Sample L3 meters from Zone 03A
-  {
-    Label: "L3",
-    "Meter Label": "Z3-42 (Villa)",
-    "Acct #": "4300002",
-    Zone: "Zone_03A",
-    Type: "Residential (Villa)",
-    "Parent Meter": "ZONE 3A (BULK ZONE 3A)",
-    "Jan-24": 61,
-    "Feb-24": 33,
-    "Mar-24": 36,
-    "Apr-24": 47,
-    "May-24": 39,
-    "Jun-24": 42,
-    "Jul-24": 25,
-    "Aug-24": 20,
-    "Sep-24": 44,
-    "Oct-24": 57,
-    "Nov-24": 51,
-    "Dec-24": 75,
-    "Jan-25": 32,
-    "Feb-25": 46,
-    "Mar-25": 19,
-  },
-  {
-    Label: "L3",
-    "Meter Label": "Z3-31 (Villa)",
-    "Acct #": "4300052",
-    Zone: "Zone_03A",
-    Type: "Residential (Villa)",
-    "Parent Meter": "ZONE 3A (BULK ZONE 3A)",
-    "Jan-24": 115,
-    "Feb-24": 105,
-    "Mar-24": 86,
-    "Apr-24": 81,
-    "May-24": 140,
-    "Jun-24": 135,
-    "Jul-24": 151,
-    "Aug-24": 258,
-    "Sep-24": 222,
-    "Oct-24": 37,
-    "Nov-24": 164,
-    "Dec-24": 176,
-    "Jan-25": 165,
-    "Feb-25": 133,
-    "Mar-25": 30,
-  },
-
-  // Problematic meter to be excluded
-  {
-    Label: "L3",
-    "Meter Label": "Z3-74(3) (Building)",
-    "Acct #": "4300322",
-    Zone: "Zone_03A",
-    Type: "Residential (Apart)",
-    "Parent Meter": "D-74 Building Bulk Meter",
-    "Jan-24": 0,
-    "Feb-24": 0,
-    "Mar-24": 0,
-    "Apr-24": 0,
-    "May-24": 0,
-    "Jun-24": 0,
-    "Jul-24": 0,
-    "Aug-24": 0,
-    "Sep-24": 0,
-    "Oct-24": 0,
-    "Nov-24": 0,
-    "Dec-24": 0,
-    "Jan-25": 0,
-    "Feb-25": 0,
-    "Mar-25": 0,
-  },
-
-  // Sample L3 meters from Zone 03B
-  {
-    Label: "L3",
-    "Meter Label": "Z3-12 (Villa)",
-    "Acct #": "4300076",
-    Zone: "Zone_03B",
-    Type: "Residential (Villa)",
-    "Parent Meter": "ZONE 3B (BULK ZONE 3B)",
-    "Jan-24": 52,
-    "Feb-24": 95,
-    "Mar-24": 258,
-    "Apr-24": 55,
-    "May-24": 67,
-    "Jun-24": 111,
-    "Jul-24": 93,
-    "Aug-24": 120,
-    "Sep-24": 118,
-    "Oct-24": 178,
-    "Nov-24": 55,
-    "Dec-24": 67,
-    "Jan-25": 73,
-    "Feb-25": 59,
-    "Mar-25": 54,
-  },
-  {
-    Label: "L3",
-    "Meter Label": "Z3-4 (Villa)",
-    "Acct #": "4300078",
-    Zone: "Zone_03B",
-    Type: "Residential (Villa)",
-    "Parent Meter": "ZONE 3B (BULK ZONE 3B)",
-    "Jan-24": 105,
-    "Feb-24": 90,
-    "Mar-24": 96,
-    "Apr-24": 106,
-    "May-24": 126,
-    "Jun-24": 122,
-    "Jul-24": 156,
-    "Aug-24": 150,
-    "Sep-24": 97,
-    "Oct-24": 171,
-    "Nov-24": 56,
-    "Dec-24": 111,
-    "Jan-25": 90,
-    "Feb-25": 55,
-    "Mar-25": 22,
-  },
-
-  // Sample L3 meters from Zone 05
+  
+  // L3 meters (sample from Zone 5)
   {
     Label: "L3",
     "Meter Label": "Z5-17",
@@ -642,6 +157,9 @@ export const realWaterData: WaterMeter[] = [
     Zone: "Zone_05",
     Type: "Residential (Villa)",
     "Parent Meter": "ZONE 5 (Bulk Zone 5)",
+    "Jan-25": 112,
+    "Feb-25": 80,
+    "Mar-25": 81,
     "Jan-24": 99,
     "Feb-24": 51,
     "Mar-24": 53,
@@ -654,391 +172,5 @@ export const realWaterData: WaterMeter[] = [
     "Oct-24": 103,
     "Nov-24": 54,
     "Dec-24": 148,
-    "Jan-25": 112,
-    "Feb-25": 80,
-    "Mar-25": 81,
   },
-  {
-    Label: "L3",
-    "Meter Label": "Irrigation Tank 03 (Z05)",
-    "Acct #": "4300321",
-    Zone: "Zone_05",
-    Type: "IRR_Servies",
-    "Parent Meter": "ZONE 5 (Bulk Zone 5)",
-    "Jan-24": 1223,
-    "Feb-24": 1016,
-    "Mar-24": 552,
-    "Apr-24": 808,
-    "May-24": 0,
-    "Jun-24": 347,
-    "Jul-24": 763,
-    "Aug-24": 0,
-    "Sep-24": 0,
-    "Oct-24": 0,
-    "Nov-24": 1,
-    "Dec-24": 0,
-    "Jan-25": 0,
-    "Feb-25": 0,
-    "Mar-25": 0,
-  },
-
-  // Sample L3 meters from Zone 08
-  {
-    Label: "L3",
-    "Meter Label": "Z8-12",
-    "Acct #": "4300196",
-    Zone: "Zone_08",
-    Type: "Residential (Villa)",
-    "Parent Meter": "BULK ZONE 8",
-    "Jan-24": 109,
-    "Feb-24": 148,
-    "Mar-24": 169,
-    "Apr-24": 235,
-    "May-24": 180,
-    "Jun-24": 235,
-    "Jul-24": 237,
-    "Aug-24": 442,
-    "Sep-24": 661,
-    "Oct-24": 417,
-    "Nov-24": 223,
-    "Dec-24": 287,
-    "Jan-25": 236,
-    "Feb-25": 192,
-    "Mar-25": 249,
-  },
-  {
-    Label: "L3",
-    "Meter Label": "Z8-18",
-    "Acct #": "4300289",
-    Zone: "Zone_08",
-    Type: "Residential (Villa)",
-    "Parent Meter": "BULK ZONE 8",
-    "Jan-24": 290,
-    "Feb-24": 212,
-    "Mar-24": 253,
-    "Apr-24": 418,
-    "May-24": 384,
-    "Jun-24": 478,
-    "Jul-24": 459,
-    "Aug-24": 410,
-    "Sep-24": 312,
-    "Oct-24": 196,
-    "Nov-24": 239,
-    "Dec-24": 149,
-    "Jan-25": 122,
-    "Feb-25": 111,
-    "Mar-25": 336,
-  },
-
-  // Sample L3 meters from Zone VS
-  {
-    Label: "L3",
-    "Meter Label": "Irrigation Tank - VS",
-    "Acct #": "4300326",
-    Zone: "Zone_VS",
-    Type: "IRR_Servies",
-    "Parent Meter": "Village Square (Zone Bulk)",
-    "Jan-24": 0,
-    "Feb-24": 0,
-    "Mar-24": 0,
-    "Apr-24": 2,
-    "May-24": 0,
-    "Jun-24": 157,
-    "Jul-24": 116,
-    "Aug-24": 71,
-    "Sep-24": 100,
-    "Oct-24": 0,
-    "Nov-24": 1,
-    "Dec-24": 0,
-    "Jan-25": 0,
-    "Feb-25": 0,
-    "Mar-25": 0,
-  },
-  {
-    Label: "L3",
-    "Meter Label": "Laundry Services (FF Shop No.593)",
-    "Acct #": "4300332",
-    Zone: "Zone_VS",
-    Type: "Retail",
-    "Parent Meter": "Village Square (Zone Bulk)",
-    "Jan-24": 0,
-    "Feb-24": 1,
-    "Mar-24": 16,
-    "Apr-24": 49,
-    "May-24": 32,
-    "Jun-24": 34,
-    "Jul-24": 32,
-    "Aug-24": 47,
-    "Sep-24": 34,
-    "Oct-24": 45,
-    "Nov-24": 52,
-    "Dec-24": 31,
-    "Jan-25": 33,
-    "Feb-25": 25,
-    "Mar-25": 22,
-  },
-]
-
-// Water balance table data
-export const waterBalanceTable = [
-  {
-    month: "Jan-24",
-    L1: 32803,
-    L2Modified: 28689,
-    L3Modified: 25717,
-    stage1Loss: 4114,
-    stage2Loss: 3012,
-    totalLoss: 7086,
-    totalLossCheck: 7126,
-  },
-  {
-    month: "Feb-24",
-    L1: 27996,
-    L2Modified: 24372,
-    L3Modified: 22525,
-    stage1Loss: 3624,
-    stage2Loss: 1847,
-    totalLoss: 5471,
-    totalLossCheck: 5471,
-  },
-  {
-    month: "Mar-24",
-    L1: 23860,
-    L2Modified: 22827,
-    L3Modified: 21620,
-    stage1Loss: 1033,
-    stage2Loss: 1207,
-    totalLoss: 2240,
-    totalLossCheck: 2240,
-  },
-  {
-    month: "Apr-24",
-    L1: 31869,
-    L2Modified: 29481,
-    L3Modified: 27266,
-    stage1Loss: 2388,
-    stage2Loss: 2215,
-    totalLoss: 4603,
-    totalLossCheck: 4603,
-  },
-  {
-    month: "May-24",
-    L1: 30737,
-    L2Modified: 30360,
-    L3Modified: 28002,
-    stage1Loss: 377,
-    stage2Loss: 2358,
-    totalLoss: 2735,
-    totalLossCheck: 2735,
-  },
-  {
-    month: "Jun-24",
-    L1: 41953,
-    L2Modified: 35645,
-    L3Modified: 32481,
-    stage1Loss: 6308,
-    stage2Loss: 3164,
-    totalLoss: 9472,
-    totalLossCheck: 9472,
-  },
-  {
-    month: "Jul-24",
-    L1: 35166,
-    L2Modified: 32694,
-    L3Modified: 29827,
-    stage1Loss: 2472,
-    stage2Loss: 2867,
-    totalLoss: 5339,
-    totalLossCheck: 5339,
-  },
-  {
-    month: "Aug-24",
-    L1: 35420,
-    L2Modified: 31498,
-    L3Modified: 29030,
-    stage1Loss: 3922,
-    stage2Loss: 2468,
-    totalLoss: 6390,
-    totalLossCheck: 6390,
-  },
-  {
-    month: "Sep-24",
-    L1: 41341,
-    L2Modified: 32862,
-    L3Modified: 30112,
-    stage1Loss: 8479,
-    stage2Loss: 2750,
-    totalLoss: 11229,
-    totalLossCheck: 11229,
-  },
-  {
-    month: "Oct-24",
-    L1: 31519,
-    L2Modified: 37321,
-    L3Modified: 33741,
-    stage1Loss: -5802,
-    stage2Loss: 3580,
-    totalLoss: -2222,
-    totalLossCheck: -2222,
-  },
-  {
-    month: "Nov-24",
-    L1: 35290,
-    L2Modified: 28760,
-    L3Modified: 26339,
-    stage1Loss: 6530,
-    stage2Loss: 2421,
-    totalLoss: 8951,
-    totalLossCheck: 8951,
-  },
-  {
-    month: "Dec-24",
-    L1: 36733,
-    L2Modified: 29164,
-    L3Modified: 26745,
-    stage1Loss: 7569,
-    stage2Loss: 2419,
-    totalLoss: 10008,
-    totalLossCheck: 9988,
-  },
-  {
-    month: "Jan-25",
-    L1: 32580,
-    L2Modified: 33430,
-    L3Modified: 30442,
-    stage1Loss: -850,
-    stage2Loss: 2988,
-    totalLoss: 2138,
-    totalLossCheck: 2138,
-  },
-  {
-    month: "Feb-25",
-    L1: 44043,
-    L2Modified: 35647,
-    L3Modified: 31987,
-    stage1Loss: 8396,
-    stage2Loss: 3660,
-    totalLoss: 12056,
-    totalLossCheck: 12056,
-  },
-  {
-    month: "Mar-25",
-    L1: 34915,
-    L2Modified: 40495,
-    L3Modified: 36555,
-    stage1Loss: -5580,
-    stage2Loss: 3940,
-    totalLoss: -1640,
-    totalLossCheck: -1640,
-  },
-]
-
-// Function to calculate water metrics based on the provided data
-export function calculateWaterMetrics(data: WaterMeter[], month: string, year: string) {
-  const monthKey = `${month}-${year.substring(2)}`
-
-  // Find L1 meter (Main Bulk)
-  const l1Meter = data.find((row) => row.Label === "L1" && row["Acct #"] === "C43659")
-  const totalL1Supply = l1Meter ? l1Meter[monthKey] || 0 : 0
-
-  // Initialize variables
-  let totalL2Native = 0 // Sum of all L2 meters
-  let totalL3NativeExcl = 0 // Sum of all L3 meters (excluding Acct # 4300322)
-  let totalDC = 0 // Sum of all DC meters
-  const consumptionByType: Record<string, number> = {}
-  const zoneMetrics: Record<string, any> = {}
-
-  // Initialize zone metrics
-  data.forEach((row) => {
-    if (row.Zone && !zoneMetrics[row.Zone]) {
-      zoneMetrics[row.Zone] = {
-        l2Bulk: 0,
-        l3Sum: 0,
-        loss: 0,
-        lossPercentage: 0,
-      }
-    }
-  })
-
-  // Calculate sums
-  data.forEach((row) => {
-    const value = row[monthKey] || 0
-
-    // Skip problematic meter
-    if (row["Acct #"] === "4300322") return
-
-    // L2 meters
-    if (row.Label === "L2") {
-      totalL2Native += value
-
-      // Add to zone metrics
-      if (row.Zone) {
-        zoneMetrics[row.Zone].l2Bulk += value
-      }
-    }
-
-    // DC meters
-    if (row.Label === "DC") {
-      totalDC += value
-
-      // Add to consumption by type
-      if (row.Type) {
-        consumptionByType[row.Type] = (consumptionByType[row.Type] || 0) + value
-      }
-    }
-
-    // L3 meters (excluding Acct # 4300322)
-    if (row.Label === "L3" && row["Acct #"] !== "4300322") {
-      totalL3NativeExcl += value
-
-      // Add to consumption by type
-      if (row.Type) {
-        consumptionByType[row.Type] = (consumptionByType[row.Type] || 0) + value
-      }
-
-      // Add to zone metrics for L3
-      if (row.Zone) {
-        zoneMetrics[row.Zone].l3Sum += value
-      }
-    }
-  })
-
-  // Calculate L2 (Modified) and L3 (Modified) as per the provided definitions
-  const totalL2Modified = totalL2Native + totalDC
-  const totalL3Modified = totalL3NativeExcl + totalDC
-
-  // Calculate losses
-  const stage1Loss = totalL1Supply - totalL2Modified
-  const stage2Loss = totalL2Native - totalL3NativeExcl
-  const totalLoss = totalL1Supply - totalL3Modified
-
-  // Calculate zone losses
-  Object.keys(zoneMetrics).forEach((zone) => {
-    const { l2Bulk, l3Sum } = zoneMetrics[zone]
-    zoneMetrics[zone].loss = l2Bulk - l3Sum
-    zoneMetrics[zone].lossPercentage = l2Bulk > 0 ? ((l2Bulk - l3Sum) / l2Bulk) * 100 : 0
-  })
-
-  return {
-    totalL1Supply,
-    totalL2Volume: totalL2Modified, // Using the modified definition
-    totalL3Volume: totalL3Modified, // Using the modified definition
-    stage1Loss,
-    stage2Loss,
-    totalLoss,
-    stage1LossPercentage: totalL1Supply > 0 ? (stage1Loss / totalL1Supply) * 100 : 0,
-    stage2LossPercentage: totalL2Native > 0 ? (stage2Loss / totalL2Native) * 100 : 0,
-    totalLossPercentage: totalL1Supply > 0 ? (totalLoss / totalL1Supply) * 100 : 0,
-    consumptionByType,
-    zoneMetrics,
-    // Additional metrics for reference
-    totalL2Native,
-    totalL3NativeExcl,
-    totalDC,
-  }
-}
-
-// Function to get water balance data for a specific year
-export function getWaterBalanceData(year: string) {
-  return waterBalanceTable.filter((item) => item.month.includes(year.substring(2)))
-}
+];
