@@ -1,0 +1,2670 @@
+```javascript
+// src/data/zoneMeterData.js
+
+export const zoneData = {
+  directConnection: {
+    id: "DC",
+    name: "Direct Connection Zone (DC)",
+    description: "Major facilities/systems connected directly to the L1 Main Bulk Meter.",
+    suppliedBy: "Main Bulk (NAMA) (L1 - Acct # C43659)",
+    bulkMeter: null,
+    meters: [
+      {
+        label: "Irrigation Tank 04 - (Z08)",
+        account: "4300294",
+        zone: "Direct Connection ", // Note: CSV has a trailing space here
+        type: "IRR_Servies",
+        parent: "Main Bulk (NAMA)",
+        hierarchyLabel: "DC",
+        consumption: { "Jan-24": 764, "Feb-24": 509, "Mar-24": 440, "Apr-24": 970, "May-24": 1165, "Jun-24": 1475, "Jul-24": 782, "Aug-24": 559, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Sales Center Common Building", // Cleaned: removed newline
+        account: "4300295",
+        zone: "Direct Connection ",
+        type: "MB_Common",
+        parent: "Main Bulk (NAMA)",
+        hierarchyLabel: "DC",
+        consumption: { "Jan-24": 45, "Feb-24": 46, "Mar-24": 37, "Apr-24": 35, "May-24": 61, "Jun-24": 32, "Jul-24": 36, "Aug-24": 28, "Sep-24": 25, "Oct-24": 41, "Nov-24": 54, "Dec-24": 62, "Jan-25": 76, "Feb-25": 68, "Mar-25": 37 }
+      },
+      {
+        label: "Building (Security)",
+        account: "4300297",
+        zone: "Direct Connection ",
+        type: "MB_Common",
+        parent: "Main Bulk (NAMA)",
+        hierarchyLabel: "DC",
+        consumption: { "Jan-24": 33, "Feb-24": 31, "Mar-24": 30, "Apr-24": 32, "May-24": 9, "Jun-24": 4, "Jul-24": 4, "Aug-24": 4, "Sep-24": 5, "Oct-24": 6, "Nov-24": 10, "Dec-24": 17, "Jan-25": 17, "Feb-25": 18, "Mar-25": 13 }
+      },
+      {
+        label: "Building (ROP)",
+        account: "4300299",
+        zone: "Direct Connection ",
+        type: "MB_Common",
+        parent: "Main Bulk (NAMA)",
+        hierarchyLabel: "DC",
+        consumption: { "Jan-24": 38, "Feb-24": 31, "Mar-24": 31, "Apr-24": 33, "May-24": 10, "Jun-24": 2, "Jul-24": 3, "Aug-24": 25, "Sep-24": 42, "Oct-24": 45, "Nov-24": 25, "Dec-24": 22, "Jan-25": 23, "Feb-25": 21, "Mar-25": 19 }
+      },
+      {
+        label: "Irrigation Tank 01 (Inlet)",
+        account: "4300323",
+        zone: "Direct Connection ",
+        type: "IRR_Servies",
+        parent: "Main Bulk (NAMA)",
+        hierarchyLabel: "DC",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Hotel Main Building",
+        account: "4300334",
+        zone: "Direct Connection ",
+        type: "Retail",
+        parent: "Main Bulk (NAMA)",
+        hierarchyLabel: "DC",
+        consumption: { "Jan-24": 14012, "Feb-24": 12880, "Mar-24": 11222, "Apr-24": 13217, "May-24": 13980, "Jun-24": 15385, "Jul-24": 12810, "Aug-24": 13747, "Sep-24": 13031, "Oct-24": 17688, "Nov-24": 15156, "Dec-24": 14668, "Jan-25": 18048, "Feb-25": 19482, "Mar-25": 22151 }
+      },
+      {
+        label: "Community Mgmt - Technical Zone, STP",
+        account: "4300336",
+        zone: "Direct Connection ",
+        type: "MB_Common",
+        parent: "Main Bulk (NAMA)",
+        hierarchyLabel: "DC",
+        consumption: { "Jan-24": 28, "Feb-24": 47, "Mar-24": 34, "Apr-24": 27, "May-24": 24, "Jun-24": 51, "Jul-24": 18, "Aug-24": 23, "Sep-24": 22, "Oct-24": 17, "Nov-24": 14, "Dec-24": 25, "Jan-25": 29, "Feb-25": 37, "Mar-25": 25 }
+      },
+      {
+        label: "PHASE 02, MAIN ENTRANCE (Infrastructure)",
+        account: "4300338",
+        zone: "Direct Connection ",
+        type: "MB_Common",
+        parent: "Main Bulk (NAMA)",
+        hierarchyLabel: "DC",
+        consumption: { "Jan-24": 34, "Feb-24": 33, "Mar-24": 35, "Apr-24": 40, "May-24": 40, "Jun-24": 49, "Jul-24": 24, "Aug-24": 11, "Sep-24": 12, "Oct-24": 12, "Nov-24": 12, "Dec-24": 10, "Jan-25": 11, "Feb-25": 8, "Mar-25": 6 }
+      },
+      {
+        label: "Irrigation- Controller UP",
+        account: "4300340",
+        zone: "Direct Connection ",
+        type: "IRR_Servies",
+        parent: "Main Bulk (NAMA)",
+        hierarchyLabel: "DC",
+        consumption: { "Jan-24": 647, "Feb-24": 297, "Mar-24": 318, "Apr-24": 351, "May-24": 414, "Jun-24": 1038, "Jul-24": 1636, "Aug-24": 1213, "Sep-24": 1410, "Oct-24": 1204, "Nov-24": 124, "Dec-24": 53, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Irrigation- Controller DOWN",
+        account: "4300341",
+        zone: "Direct Connection ",
+        type: "IRR_Servies",
+        parent: "Main Bulk (NAMA)",
+        hierarchyLabel: "DC",
+        consumption: { "Jan-24": 1124, "Feb-24": 907, "Mar-24": 773, "Apr-24": 628, "May-24": 601, "Jun-24": 891, "Jul-24": 1006, "Aug-24": 742, "Sep-24": 860, "Oct-24": 1559, "Nov-24": 171, "Dec-24": 185, "Jan-25": 159, "Feb-25": 239, "Mar-25": 283 }
+      },
+      {
+        label: "Al Adrak Construction",
+        account: "4300347",
+        zone: "Direct Connection ",
+        type: "Retail",
+        parent: "Main Bulk (NAMA)",
+        hierarchyLabel: "DC",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 474, "Oct-24": 1179, "Nov-24": 494, "Dec-24": 494, "Jan-25": 597, "Feb-25": 520, "Mar-25": 580 }
+      },
+      {
+        label: "Al Adrak Camp",
+        account: "4300348",
+        zone: "Direct Connection ",
+        type: "Retail",
+        parent: "Main Bulk (NAMA)",
+        hierarchyLabel: "DC",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 193, "Oct-24": 1073, "Nov-24": 808, "Dec-24": 808, "Jan-25": 1038, "Feb-25": 702, "Mar-25": 1161 }
+      }
+    ]
+  },
+  zone01FM: {
+    id: "Zone_01_(FM)",
+    name: "Zone 01 (FM - Facilities Management)",
+    description: "Facilities management area (workshops, offices, etc.).",
+    suppliedBy: "Main Bulk (NAMA) (L1 - Acct # C43659)",
+    bulkMeter: {
+        label: "ZONE FM ( BULK ZONE FM )",
+        account: "4300346",
+        hierarchyLabel: "L2",
+        consumption: { "Jan-24": 1595, "Feb-24": 1283, "Mar-24": 1255, "Apr-24": 1383, "May-24": 1411, "Jun-24": 2078, "Jul-24": 2601, "Aug-24": 1638, "Sep-24": 1550, "Oct-24": 2098, "Nov-24": 1808, "Dec-24": 1946, "Jan-25": 2008, "Feb-25": 1740, "Mar-25": 1880 }
+    },
+    meters: [
+      {
+        label: "Building FM",
+        account: "4300296",
+        zone: "Zone_01_(FM)",
+        type: "MB_Common",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 34, "Feb-24": 43, "Mar-24": 22, "Apr-24": 18, "May-24": 27, "Jun-24": 22, "Jul-24": 32, "Aug-24": 37, "Sep-24": 34, "Oct-24": 45, "Nov-24": 30, "Dec-24": 38, "Jan-25": 37, "Feb-25": 39, "Mar-25": 49 }
+      },
+      {
+        label: "Building Taxi",
+        account: "4300298",
+        zone: "Zone_01_(FM)",
+        type: "Retail",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 11, "Feb-24": 9, "Mar-24": 10, "Apr-24": 10, "May-24": 13, "Jun-24": 10, "Jul-24": 8, "Aug-24": 13, "Sep-24": 12, "Oct-24": 17, "Nov-24": 11, "Dec-24": 13, "Jan-25": 11, "Feb-25": 16, "Mar-25": 12 }
+      },
+      {
+        label: "Building B1",
+        account: "4300300",
+        zone: "Zone_01_(FM)",
+        type: "Retail",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 258, "Feb-24": 183, "Mar-24": 178, "Apr-24": 184, "May-24": 198, "Jun-24": 181, "Jul-24": 164, "Aug-24": 202, "Sep-24": 184, "Oct-24": 167, "Nov-24": 214, "Dec-24": 245, "Jan-25": 228, "Feb-25": 225, "Mar-25": 235 }
+      },
+       {
+        label: "Building B2",
+        account: "4300301",
+        zone: "Zone_01_(FM)",
+        type: "Retail",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 239, "Feb-24": 194, "Mar-24": 214, "Apr-24": 205, "May-24": 167, "Jun-24": 187, "Jul-24": 177, "Aug-24": 191, "Sep-24": 206, "Oct-24": 163, "Nov-24": 194, "Dec-24": 226, "Jan-25": 236, "Feb-25": 213, "Mar-25": 202 }
+      },
+      {
+        label: "Building B3",
+        account: "4300302",
+        zone: "Zone_01_(FM)",
+        type: "Retail",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 166, "Feb-24": 147, "Mar-24": 153, "Apr-24": 190, "May-24": 170, "Jun-24": 124, "Jul-24": 119, "Aug-24": 123, "Sep-24": 131, "Oct-24": 112, "Nov-24": 172, "Dec-24": 161, "Jan-25": 169, "Feb-25": 165, "Mar-25": 132 }
+      },
+      {
+        label: "Building B4",
+        account: "4300303",
+        zone: "Zone_01_(FM)",
+        type: "Retail",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 8, "Feb-24": 17, "Mar-24": 21, "Apr-24": 29, "May-24": 30, "Jun-24": 5, "Jul-24": 93, "Aug-24": 130, "Sep-24": 119, "Oct-24": 92, "Nov-24": 134, "Dec-24": 138, "Jan-25": 108, "Feb-25": 108, "Mar-25": 148 }
+      },
+      {
+        label: "Building B5",
+        account: "4300304",
+        zone: "Zone_01_(FM)",
+        type: "Retail",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 28, "Feb-24": 0, "Mar-24": 0, "Apr-24": 17, "May-24": 49, "Jun-24": 175, "Jul-24": 8, "Aug-24": 8, "Sep-24": 3, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 1, "Feb-25": 2, "Mar-25": 1 }
+      },
+      {
+        label: "Building B6",
+        account: "4300305",
+        zone: "Zone_01_(FM)",
+        type: "Retail",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 7, "Feb-24": 9, "Mar-24": 9, "Apr-24": 11, "May-24": 16, "Jun-24": 57, "Jul-24": 131, "Aug-24": 234, "Sep-24": 226, "Oct-24": 196, "Nov-24": 195, "Dec-24": 224, "Jan-25": 254, "Feb-25": 228, "Mar-25": 268 }
+      },
+      {
+        label: "Building B7",
+        account: "4300306",
+        zone: "Zone_01_(FM)",
+        type: "Retail",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 304, "Feb-24": 243, "Mar-24": 251, "Apr-24": 275, "May-24": 244, "Jun-24": 226, "Jul-24": 140, "Aug-24": 161, "Sep-24": 36, "Oct-24": 116, "Nov-24": 148, "Dec-24": 151, "Jan-25": 178, "Feb-25": 190, "Mar-25": 174 }
+      },
+      {
+        label: "Building B8",
+        account: "4300307",
+        zone: "Zone_01_(FM)",
+        type: "Retail",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 557, "Feb-24": 260, "Mar-24": 253, "Apr-24": 290, "May-24": 320, "Jun-24": 275, "Jul-24": 261, "Aug-24": 196, "Sep-24": 176, "Oct-24": 178, "Nov-24": 261, "Dec-24": 276, "Jan-25": 268, "Feb-25": 250, "Mar-25": 233 }
+      },
+      {
+        label: "Irrigation Tank (Z01_FM)",
+        account: "4300308",
+        zone: "Zone_01_(FM)",
+        type: "IRR_Servies",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 519, "Jul-24": 877, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Room PUMP (FIRE)",
+        account: "4300309",
+        zone: "Zone_01_(FM)",
+        type: "MB_Common",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 25, "Dec-24": 107, "Jan-25": 78, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Building (MEP)",
+        account: "4300310",
+        zone: "Zone_01_(FM)",
+        type: "MB_Common",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 1, "Feb-24": 1, "Mar-24": 1, "Apr-24": 2, "May-24": 4, "Jun-24": 4, "Jul-24": 6, "Aug-24": 8, "Sep-24": 3, "Oct-24": 2, "Nov-24": 3, "Dec-24": 2, "Jan-25": 2, "Feb-25": 2, "Mar-25": 1 }
+      },
+      {
+        label: "Building CIF/CB",
+        account: "4300324",
+        zone: "Zone_01_(FM)",
+        type: "Retail",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 8, "Feb-24": 5, "Mar-24": 6, "Apr-24": 27, "May-24": 29, "Jun-24": 25, "Jul-24": 258, "Aug-24": 300, "Sep-24": 285, "Oct-24": 388, "Nov-24": 349, "Dec-24": 347, "Jan-25": 420, "Feb-25": 331, "Mar-25": 306 }
+      },
+      {
+        label: "Building Nursery Building",
+        account: "4300325",
+        zone: "Zone_01_(FM)",
+        type: "Retail",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 7, "Feb-24": 6, "Mar-24": 5, "Apr-24": 5, "May-24": 6, "Jun-24": 4, "Jul-24": 5, "Aug-24": 6, "Sep-24": 6, "Oct-24": 8, "Nov-24": 5, "Dec-24": 5, "Jan-25": 4, "Feb-25": 4, "Mar-25": 4 }
+      },
+      {
+        label: "Cabinet FM (CONTRACTORS OFFICE)",
+        account: "4300337",
+        zone: "Zone_01_(FM)",
+        type: "MB_Common",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 99, "Feb-24": 98, "Mar-24": 70, "Apr-24": 53, "May-24": 22, "Jun-24": 95, "Jul-24": 90, "Aug-24": 10, "Sep-24": 4, "Oct-24": 1, "Nov-24": 15, "Dec-24": 42, "Jan-25": 68, "Feb-25": 59, "Mar-25": 52 }
+      },
+      {
+        label: "Building CIF/CB (COFFEE SH)",
+        account: "4300339",
+        zone: "Zone_01_(FM)",
+        type: "Retail",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 19, "Feb-24": 10, "Mar-24": 1, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      }
+    ]
+  },
+  zone03A: {
+    id: "Zone_03_(A)",
+    name: "Zone 03 (A) - Residential Area",
+    description: "Residential area (villas & apartments).",
+    suppliedBy: "Main Bulk (NAMA) (L1 - Acct # C43659)",
+    bulkMeter: {
+        label: "ZONE 3A (BULK ZONE 3A)",
+        account: "4300343",
+        hierarchyLabel: "L2",
+        consumption: { "Jan-24": 1234, "Feb-24": 1099, "Mar-24": 1297, "Apr-24": 1892, "May-24": 2254, "Jun-24": 2227, "Jul-24": 3313, "Aug-24": 3172, "Sep-24": 2698, "Oct-24": 3715, "Nov-24": 3501, "Dec-24": 3796, "Jan-25": 4235, "Feb-25": 4273, "Mar-25": 3591 }
+    },
+    meters: [ // This combines villas, apartments, and building commons within Zone 03 (A)
+      {
+        label: "Z3-42 (Villa)",
+        account: "4300002",
+        zone: "Zone_03_(A)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3A (BULK ZONE 3A)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 61, "Feb-24": 33, "Mar-24": 36, "Apr-24": 47, "May-24": 39, "Jun-24": 42, "Jul-24": 25, "Aug-24": 20, "Sep-24": 44, "Oct-24": 57, "Nov-24": 51, "Dec-24": 75, "Jan-25": 32, "Feb-25": 46, "Mar-25": 19 }
+      },
+      {
+        label: "Z3-46(5) (Building)",
+        account: "4300003",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-46 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 5, "Feb-25": 0, "Mar-25": 0 }
+      },
+      // ... (Continue for all meters in Zone 03A from the CSV)
+      // Remember to correctly assign the type ('Residential (Villa)', 'Residential (Apart)', 'D_Building_Common')
+      // Example for a D_Building_Common
+      {
+        label: "D 45-Building Common Meter",
+        account: "4300135",
+        zone: "Zone_03_(A)",
+        type: "D_Building_Common",
+        parent: "D-45 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 3, "Feb-24": 3, "Mar-24": 2, "Apr-24": 1, "May-24": 1, "Jun-24": 1, "Jul-24": 1, "Aug-24": 0, "Sep-24": 1, "Oct-24": 1, "Nov-24": 1, "Dec-24": 1, "Jan-25": 0, "Feb-25": 1, "Mar-25": 1 }
+      },
+      { // EXCLUDED METER - Note: You'd typically filter this out if doing calculations later
+        label: "Z3-74(3) (Building)",
+        account: "4300322",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-74 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      }
+      // ... (ensure all Zone 03A meters are listed here)
+    ]
+  },
+  // ... (Repeat for zone03B, zone05, zone08, zoneVS, zoneSC, similar to zone03A)
+  // Ensure you list ALL meters under their respective zone, including their correct type and consumption
+  zoneSC: {
+    id: "Zone_SC",
+    name: "Zone SC (Sale Centre) - Administrative Area",
+    description: "Sales and administrative facilities. Zone Bulk Meter details were not explicitly provided in the L2 list.",
+    suppliedBy: "Main Bulk (NAMA) (L1 - Acct # C43659)",
+    bulkMeter: {
+        label: "Sale Centre (Zone Bulk)", // This is an assumption based on L3 parent
+        account: "UNKNOWN_SC_BULK",      // Needs actual account if available
+        hierarchyLabel: "L2",
+        consumption: null // Consumption data missing for this assumed bulk meter
+    },
+    meters: [
+        {
+            label: "Sale Centre Caffe & Bar (GF Shop No.592 A)",
+            account: "4300328",
+            zone: "Zone_SC",
+            type: "Retail", // This meter is of type Retail
+            parent: " Sale Centre (Zone Bulk)",
+            hierarchyLabel: "L3",
+            consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 6, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 2, "Mar-25": 3 }
+        }
+    ]
+  }
+};
+```
+
+---
+
+**File 2: `src/data/meterDataByType.js`**
+(This is the one you specifically asked for, with all meters grouped by their `Type`)
+
+```javascript
+// src/data/meterDataByType.js
+
+export const meterDataByType = {
+  irrServies: {
+    id: "IRR_Servies",
+    description: "Irrigation systems for landscape watering, including tanks and controllers. Often high volume with seasonal variation.",
+    meters: [
+      {
+        label: "Irrigation Tank 04 - (Z08)",
+        account: "4300294",
+        zone: "Direct Connection ",
+        type: "IRR_Servies",
+        parent: "Main Bulk (NAMA)",
+        hierarchyLabel: "DC",
+        consumption: { "Jan-24": 764, "Feb-24": 509, "Mar-24": 440, "Apr-24": 970, "May-24": 1165, "Jun-24": 1475, "Jul-24": 782, "Aug-24": 559, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Irrigation Tank 01 (Inlet)",
+        account: "4300323",
+        zone: "Direct Connection ",
+        type: "IRR_Servies",
+        parent: "Main Bulk (NAMA)",
+        hierarchyLabel: "DC",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Irrigation- Controller UP",
+        account: "4300340",
+        zone: "Direct Connection ",
+        type: "IRR_Servies",
+        parent: "Main Bulk (NAMA)",
+        hierarchyLabel: "DC",
+        consumption: { "Jan-24": 647, "Feb-24": 297, "Mar-24": 318, "Apr-24": 351, "May-24": 414, "Jun-24": 1038, "Jul-24": 1636, "Aug-24": 1213, "Sep-24": 1410, "Oct-24": 1204, "Nov-24": 124, "Dec-24": 53, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Irrigation- Controller DOWN",
+        account: "4300341",
+        zone: "Direct Connection ",
+        type: "IRR_Servies",
+        parent: "Main Bulk (NAMA)",
+        hierarchyLabel: "DC",
+        consumption: { "Jan-24": 1124, "Feb-24": 907, "Mar-24": 773, "Apr-24": 628, "May-24": 601, "Jun-24": 891, "Jul-24": 1006, "Aug-24": 742, "Sep-24": 860, "Oct-24": 1559, "Nov-24": 171, "Dec-24": 185, "Jan-25": 159, "Feb-25": 239, "Mar-25": 283 }
+      },
+      {
+        label: "Irrigation Tank (Z01_FM)",
+        account: "4300308",
+        zone: "Zone_01_(FM)",
+        type: "IRR_Servies",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 519, "Jul-24": 877, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Irrigation Tank 02 (Z03)",
+        account: "4300320",
+        zone: "Zone_03_(B)",
+        type: "IRR_Servies",
+        parent: "ZONE 3B (BULK ZONE 3B)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 42, "Feb-24": 36, "Mar-24": 74, "Apr-24": 39, "May-24": 31, "Jun-24": 36, "Jul-24": 45, "Aug-24": 45, "Sep-24": 30, "Oct-24": 30, "Nov-24": 29, "Dec-24": 57, "Jan-25": 49, "Feb-25": 47, "Mar-25": 43 }
+      },
+      {
+        label: "Irrigation Tank 03 (Z05)",
+        account: "4300321",
+        zone: "Zone_05",
+        type: "IRR_Servies",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 1223, "Feb-24": 1016, "Mar-24": 552, "Apr-24": 808, "May-24": 0, "Jun-24": 347, "Jul-24": 763, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 1, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Irrigation Tank - VS",
+        account: "4300326",
+        zone: "Zone_VS",
+        type: "IRR_Servies",
+        parent: "Village Square (Zone Bulk)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 2, "May-24": 0, "Jun-24": 157, "Jul-24": 116, "Aug-24": 71, "Sep-24": 100, "Oct-24": 0, "Nov-24": 1, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      }
+    ]
+  },
+  mbCommon: {
+    id: "MB_Common",
+    description: "Main Building Common Facilities - Larger community infrastructure like security, management offices, technical zones, entrances, and some facilities within Zone FM.",
+    meters: [
+      {
+        label: "Sales Center Common Building",
+        account: "4300295",
+        zone: "Direct Connection ",
+        type: "MB_Common",
+        parent: "Main Bulk (NAMA)",
+        hierarchyLabel: "DC",
+        consumption: { "Jan-24": 45, "Feb-24": 46, "Mar-24": 37, "Apr-24": 35, "May-24": 61, "Jun-24": 32, "Jul-24": 36, "Aug-24": 28, "Sep-24": 25, "Oct-24": 41, "Nov-24": 54, "Dec-24": 62, "Jan-25": 76, "Feb-25": 68, "Mar-25": 37 }
+      },
+      {
+        label: "Building (Security)",
+        account: "4300297",
+        zone: "Direct Connection ",
+        type: "MB_Common",
+        parent: "Main Bulk (NAMA)",
+        hierarchyLabel: "DC",
+        consumption: { "Jan-24": 33, "Feb-24": 31, "Mar-24": 30, "Apr-24": 32, "May-24": 9, "Jun-24": 4, "Jul-24": 4, "Aug-24": 4, "Sep-24": 5, "Oct-24": 6, "Nov-24": 10, "Dec-24": 17, "Jan-25": 17, "Feb-25": 18, "Mar-25": 13 }
+      },
+      {
+        label: "Building (ROP)",
+        account: "4300299",
+        zone: "Direct Connection ",
+        type: "MB_Common",
+        parent: "Main Bulk (NAMA)",
+        hierarchyLabel: "DC",
+        consumption: { "Jan-24": 38, "Feb-24": 31, "Mar-24": 31, "Apr-24": 33, "May-24": 10, "Jun-24": 2, "Jul-24": 3, "Aug-24": 25, "Sep-24": 42, "Oct-24": 45, "Nov-24": 25, "Dec-24": 22, "Jan-25": 23, "Feb-25": 21, "Mar-25": 19 }
+      },
+      {
+        label: "Community Mgmt - Technical Zone, STP",
+        account: "4300336",
+        zone: "Direct Connection ",
+        type: "MB_Common",
+        parent: "Main Bulk (NAMA)",
+        hierarchyLabel: "DC",
+        consumption: { "Jan-24": 28, "Feb-24": 47, "Mar-24": 34, "Apr-24": 27, "May-24": 24, "Jun-24": 51, "Jul-24": 18, "Aug-24": 23, "Sep-24": 22, "Oct-24": 17, "Nov-24": 14, "Dec-24": 25, "Jan-25": 29, "Feb-25": 37, "Mar-25": 25 }
+      },
+      {
+        label: "PHASE 02, MAIN ENTRANCE (Infrastructure)",
+        account: "4300338",
+        zone: "Direct Connection ",
+        type: "MB_Common",
+        parent: "Main Bulk (NAMA)",
+        hierarchyLabel: "DC",
+        consumption: { "Jan-24": 34, "Feb-24": 33, "Mar-24": 35, "Apr-24": 40, "May-24": 40, "Jun-24": 49, "Jul-24": 24, "Aug-24": 11, "Sep-24": 12, "Oct-24": 12, "Nov-24": 12, "Dec-24": 10, "Jan-25": 11, "Feb-25": 8, "Mar-25": 6 }
+      },
+      {
+        label: "Building FM",
+        account: "4300296",
+        zone: "Zone_01_(FM)",
+        type: "MB_Common",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 34, "Feb-24": 43, "Mar-24": 22, "Apr-24": 18, "May-24": 27, "Jun-24": 22, "Jul-24": 32, "Aug-24": 37, "Sep-24": 34, "Oct-24": 45, "Nov-24": 30, "Dec-24": 38, "Jan-25": 37, "Feb-25": 39, "Mar-25": 49 }
+      },
+      {
+        label: "Room PUMP (FIRE)",
+        account: "4300309",
+        zone: "Zone_01_(FM)",
+        type: "MB_Common",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 25, "Dec-24": 107, "Jan-25": 78, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Building (MEP)",
+        account: "4300310",
+        zone: "Zone_01_(FM)",
+        type: "MB_Common",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 1, "Feb-24": 1, "Mar-24": 1, "Apr-24": 2, "May-24": 4, "Jun-24": 4, "Jul-24": 6, "Aug-24": 8, "Sep-24": 3, "Oct-24": 2, "Nov-24": 3, "Dec-24": 2, "Jan-25": 2, "Feb-25": 2, "Mar-25": 1 }
+      },
+      {
+        label: "Cabinet FM (CONTRACTORS OFFICE)",
+        account: "4300337",
+        zone: "Zone_01_(FM)",
+        type: "MB_Common",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 99, "Feb-24": 98, "Mar-24": 70, "Apr-24": 53, "May-24": 22, "Jun-24": 95, "Jul-24": 90, "Aug-24": 10, "Sep-24": 4, "Oct-24": 1, "Nov-24": 15, "Dec-24": 42, "Jan-25": 68, "Feb-25": 59, "Mar-25": 52 }
+      }
+    ]
+  },
+  retail: {
+    id: "Retail",
+    description: "Commercial establishments like shops, cafes, restaurants, supermarkets. Also includes some high-volume direct connections like the Hotel and Construction sites classified as Retail.",
+    meters: [
+      {
+        label: "Hotel Main Building",
+        account: "4300334",
+        zone: "Direct Connection ",
+        type: "Retail",
+        parent: "Main Bulk (NAMA)",
+        hierarchyLabel: "DC",
+        consumption: { "Jan-24": 14012, "Feb-24": 12880, "Mar-24": 11222, "Apr-24": 13217, "May-24": 13980, "Jun-24": 15385, "Jul-24": 12810, "Aug-24": 13747, "Sep-24": 13031, "Oct-24": 17688, "Nov-24": 15156, "Dec-24": 14668, "Jan-25": 18048, "Feb-25": 19482, "Mar-25": 22151 }
+      },
+      {
+        label: "Al Adrak Construction",
+        account: "4300347",
+        zone: "Direct Connection ",
+        type: "Retail",
+        parent: "Main Bulk (NAMA)",
+        hierarchyLabel: "DC",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 474, "Oct-24": 1179, "Nov-24": 494, "Dec-24": 494, "Jan-25": 597, "Feb-25": 520, "Mar-25": 580 }
+      },
+      {
+        label: "Al Adrak Camp",
+        account: "4300348",
+        zone: "Direct Connection ",
+        type: "Retail",
+        parent: "Main Bulk (NAMA)",
+        hierarchyLabel: "DC",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 193, "Oct-24": 1073, "Nov-24": 808, "Dec-24": 808, "Jan-25": 1038, "Feb-25": 702, "Mar-25": 1161 }
+      },
+      {
+        label: "Building Taxi",
+        account: "4300298",
+        zone: "Zone_01_(FM)",
+        type: "Retail",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 11, "Feb-24": 9, "Mar-24": 10, "Apr-24": 10, "May-24": 13, "Jun-24": 10, "Jul-24": 8, "Aug-24": 13, "Sep-24": 12, "Oct-24": 17, "Nov-24": 11, "Dec-24": 13, "Jan-25": 11, "Feb-25": 16, "Mar-25": 12 }
+      },
+      {
+        label: "Building B1",
+        account: "4300300",
+        zone: "Zone_01_(FM)",
+        type: "Retail",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 258, "Feb-24": 183, "Mar-24": 178, "Apr-24": 184, "May-24": 198, "Jun-24": 181, "Jul-24": 164, "Aug-24": 202, "Sep-24": 184, "Oct-24": 167, "Nov-24": 214, "Dec-24": 245, "Jan-25": 228, "Feb-25": 225, "Mar-25": 235 }
+      },
+      {
+        label: "Building B2",
+        account: "4300301",
+        zone: "Zone_01_(FM)",
+        type: "Retail",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 239, "Feb-24": 194, "Mar-24": 214, "Apr-24": 205, "May-24": 167, "Jun-24": 187, "Jul-24": 177, "Aug-24": 191, "Sep-24": 206, "Oct-24": 163, "Nov-24": 194, "Dec-24": 226, "Jan-25": 236, "Feb-25": 213, "Mar-25": 202 }
+      },
+      {
+        label: "Building B3",
+        account: "4300302",
+        zone: "Zone_01_(FM)",
+        type: "Retail",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 166, "Feb-24": 147, "Mar-24": 153, "Apr-24": 190, "May-24": 170, "Jun-24": 124, "Jul-24": 119, "Aug-24": 123, "Sep-24": 131, "Oct-24": 112, "Nov-24": 172, "Dec-24": 161, "Jan-25": 169, "Feb-25": 165, "Mar-25": 132 }
+      },
+      {
+        label: "Building B4",
+        account: "4300303",
+        zone: "Zone_01_(FM)",
+        type: "Retail",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 8, "Feb-24": 17, "Mar-24": 21, "Apr-24": 29, "May-24": 30, "Jun-24": 5, "Jul-24": 93, "Aug-24": 130, "Sep-24": 119, "Oct-24": 92, "Nov-24": 134, "Dec-24": 138, "Jan-25": 108, "Feb-25": 108, "Mar-25": 148 }
+      },
+      {
+        label: "Building B5",
+        account: "4300304",
+        zone: "Zone_01_(FM)",
+        type: "Retail",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 28, "Feb-24": 0, "Mar-24": 0, "Apr-24": 17, "May-24": 49, "Jun-24": 175, "Jul-24": 8, "Aug-24": 8, "Sep-24": 3, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 1, "Feb-25": 2, "Mar-25": 1 }
+      },
+      {
+        label: "Building B6",
+        account: "4300305",
+        zone: "Zone_01_(FM)",
+        type: "Retail",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 7, "Feb-24": 9, "Mar-24": 9, "Apr-24": 11, "May-24": 16, "Jun-24": 57, "Jul-24": 131, "Aug-24": 234, "Sep-24": 226, "Oct-24": 196, "Nov-24": 195, "Dec-24": 224, "Jan-25": 254, "Feb-25": 228, "Mar-25": 268 }
+      },
+      {
+        label: "Building B7",
+        account: "4300306",
+        zone: "Zone_01_(FM)",
+        type: "Retail",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 304, "Feb-24": 243, "Mar-24": 251, "Apr-24": 275, "May-24": 244, "Jun-24": 226, "Jul-24": 140, "Aug-24": 161, "Sep-24": 36, "Oct-24": 116, "Nov-24": 148, "Dec-24": 151, "Jan-25": 178, "Feb-25": 190, "Mar-25": 174 }
+      },
+      {
+        label: "Building B8",
+        account: "4300307",
+        zone: "Zone_01_(FM)",
+        type: "Retail",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 557, "Feb-24": 260, "Mar-24": 253, "Apr-24": 290, "May-24": 320, "Jun-24": 275, "Jul-24": 261, "Aug-24": 196, "Sep-24": 176, "Oct-24": 178, "Nov-24": 261, "Dec-24": 276, "Jan-25": 268, "Feb-25": 250, "Mar-25": 233 }
+      },
+      {
+        label: "Building CIF/CB",
+        account: "4300324",
+        zone: "Zone_01_(FM)",
+        type: "Retail",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 8, "Feb-24": 5, "Mar-24": 6, "Apr-24": 27, "May-24": 29, "Jun-24": 25, "Jul-24": 258, "Aug-24": 300, "Sep-24": 285, "Oct-24": 388, "Nov-24": 349, "Dec-24": 347, "Jan-25": 420, "Feb-25": 331, "Mar-25": 306 }
+      },
+      {
+        label: "Building Nursery Building",
+        account: "4300325",
+        zone: "Zone_01_(FM)",
+        type: "Retail",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 7, "Feb-24": 6, "Mar-24": 5, "Apr-24": 5, "May-24": 6, "Jun-24": 4, "Jul-24": 5, "Aug-24": 6, "Sep-24": 6, "Oct-24": 8, "Nov-24": 5, "Dec-24": 5, "Jan-25": 4, "Feb-25": 4, "Mar-25": 4 }
+      },
+      {
+        label: "Coffee 1 (GF Shop No.591)",
+        account: "4300327",
+        zone: "Zone_VS",
+        type: "Retail",
+        parent: "Village Square (Zone Bulk)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 3 }
+      },
+      {
+        label: "Sale Centre Caffe & Bar (GF Shop No.592 A)",
+        account: "4300328",
+        zone: "Zone_SC",
+        type: "Retail",
+        parent: " Sale Centre (Zone Bulk)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 6, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 2, "Mar-25": 3 }
+      },
+      {
+        label: "Coffee 2 (GF Shop No.594 A)",
+        account: "4300329",
+        zone: "Zone_VS",
+        type: "Retail",
+        parent: "Village Square (Zone Bulk)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 3, "Nov-24": 1, "Dec-24": 3, "Jan-25": 2, "Feb-25": 3, "Mar-25": 5 }
+      },
+      {
+        label: "Supermarket (FF Shop No.591)",
+        account: "4300330",
+        zone: "Zone_VS",
+        type: "Retail",
+        parent: "Village Square (Zone Bulk)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 1, "Jun-24": 0, "Jul-24": 0, "Aug-24": 1, "Sep-24": 0, "Oct-24": 0, "Nov-24": 1, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Pharmacy (FF Shop No.591 A)",
+        account: "4300331",
+        zone: "Zone_VS",
+        type: "Retail",
+        parent: "Village Square (Zone Bulk)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 1, "Nov-24": 1, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Laundry Services (FF Shop No.593)",
+        account: "4300332",
+        zone: "Zone_VS",
+        type: "Retail",
+        parent: "Village Square (Zone Bulk)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 1, "Mar-24": 16, "Apr-24": 49, "May-24": 32, "Jun-24": 34, "Jul-24": 32, "Aug-24": 47, "Sep-24": 34, "Oct-24": 45, "Nov-24": 52, "Dec-24": 31, "Jan-25": 33, "Feb-25": 25, "Mar-25": 22 }
+      },
+      {
+        label: "Shop No.593 A",
+        account: "4300333",
+        zone: "Zone_VS",
+        type: "Retail",
+        parent: "Village Square (Zone Bulk)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 1, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Building CIF/CB (COFFEE SH)",
+        account: "4300339",
+        zone: "Zone_01_(FM)",
+        type: "Retail",
+        parent: "ZONE FM ( BULK ZONE FM )",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 19, "Feb-24": 10, "Mar-24": 1, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      }
+    ]
+  },
+  residentialVilla: {
+    id: "Residential (Villa)",
+    description: "Individual residential houses, typically with higher consumption per unit and potential garden irrigation.",
+    meters: [
+      {
+        label: "Z5-17",
+        account: "4300001",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 99, "Feb-24": 51, "Mar-24": 53, "Apr-24": 62, "May-24": 135, "Jun-24": 140, "Jul-24": 34, "Aug-24": 132, "Sep-24": 63, "Oct-24": 103, "Nov-24": 54, "Dec-24": 148, "Jan-25": 112, "Feb-25": 80, "Mar-25": 81 }
+      },
+      {
+        label: "Z3-42 (Villa)",
+        account: "4300002",
+        zone: "Zone_03_(A)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3A (BULK ZONE 3A)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 61, "Feb-24": 33, "Mar-24": 36, "Apr-24": 47, "May-24": 39, "Jun-24": 42, "Jul-24": 25, "Aug-24": 20, "Sep-24": 44, "Oct-24": 57, "Nov-24": 51, "Dec-24": 75, "Jan-25": 32, "Feb-25": 46, "Mar-25": 19 }
+      },
+      {
+        label: "Z3-38 (Villa)",
+        account: "4300005",
+        zone: "Zone_03_(A)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3A (BULK ZONE 3A)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 3, "Jul-24": 0, "Aug-24": 4, "Sep-24": 30, "Oct-24": 2, "Nov-24": 12, "Dec-24": 11, "Jan-25": 10, "Feb-25": 7, "Mar-25": 7 }
+      },
+      {
+        label: "Z3-21 (Villa)",
+        account: "4300009",
+        zone: "Zone_03_(B)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3B (BULK ZONE 3B)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 37, "Feb-24": 38, "Mar-24": 24, "Apr-24": 20, "May-24": 31, "Jun-24": 41, "Jul-24": 9, "Aug-24": 54, "Sep-24": 263, "Oct-24": 68, "Nov-24": 45, "Dec-24": 43, "Jan-25": 41, "Feb-25": 53, "Mar-25": 42 }
+      },
+      {
+        label: "Z3-20 (Villa)",
+        account: "4300020",
+        zone: "Zone_03_(B)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3B (BULK ZONE 3B)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 2, "Feb-24": 1, "Mar-24": 1, "Apr-24": 2, "May-24": 2, "Jun-24": 2, "Jul-24": 6, "Aug-24": 4, "Sep-24": 10, "Oct-24": 14, "Nov-24": 10, "Dec-24": 11, "Jan-25": 12, "Feb-25": 14, "Mar-25": 7 }
+      },
+      {
+        label: "Z8-11",
+        account: "4300023",
+        zone: "Zone_08",
+        type: "Residential (Villa)",
+        parent: "BULK ZONE 8",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 1, "Mar-24": 0, "Apr-24": 0, "May-24": 1, "Jun-24": 23, "Jul-24": 2, "Aug-24": 2, "Sep-24": 1, "Oct-24": 1, "Nov-24": 2, "Dec-24": 0, "Jan-25": 0, "Feb-25": 1, "Mar-25": 0 }
+      },
+      {
+        label: "Z8-13",
+        account: "4300024",
+        zone: "Zone_08",
+        type: "Residential (Villa)",
+        parent: "BULK ZONE 8",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 6, "Feb-24": 2, "Mar-24": 1, "Apr-24": 1, "May-24": 0, "Jun-24": 15, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 3, "Nov-24": 2, "Dec-24": 1, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-13 (Villa)",
+        account: "4300025",
+        zone: "Zone_03_(B)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3B (BULK ZONE 3B)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 24, "Feb-24": 27, "Mar-24": 23, "Apr-24": 17, "May-24": 20, "Jun-24": 24, "Jul-24": 10, "Aug-24": 11, "Sep-24": 5, "Oct-24": 20, "Nov-24": 16, "Dec-24": 19, "Jan-25": 20, "Feb-25": 22, "Mar-25": 18 }
+      },
+      {
+        label: "Z3-23 (Villa)",
+        account: "4300038",
+        zone: "Zone_03_(A)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3A (BULK ZONE 3A)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 29, "Feb-24": 16, "Mar-24": 18, "Apr-24": 18, "May-24": 15, "Jun-24": 32, "Jul-24": 24, "Aug-24": 28, "Sep-24": 25, "Oct-24": 37, "Nov-24": 2, "Dec-24": 2, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-41 (Villa)",
+        account: "4300044",
+        zone: "Zone_03_(A)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3A (BULK ZONE 3A)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 50, "Feb-24": 38, "Mar-24": 26, "Apr-24": 20, "May-24": 90, "Jun-24": 66, "Jul-24": 128, "Aug-24": 192, "Sep-24": 58, "Oct-24": 53, "Nov-24": 44, "Dec-24": 22, "Jan-25": 13, "Feb-25": 18, "Mar-25": 34 }
+      },
+      {
+        label: "Z3-37 (Villa)",
+        account: "4300049",
+        zone: "Zone_03_(A)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3A (BULK ZONE 3A)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 1, "Feb-24": 2, "Mar-24": 0, "Apr-24": 1, "May-24": 0, "Jun-24": 0, "Jul-24": 5, "Aug-24": 13, "Sep-24": 0, "Oct-24": 1, "Nov-24": 1, "Dec-24": 3, "Jan-25": 26, "Feb-25": 15, "Mar-25": 18 }
+      },
+      {
+        label: "Z3-43 (Villa)",
+        account: "4300050",
+        zone: "Zone_03_(A)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3A (BULK ZONE 3A)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 79, "Feb-24": 67, "Mar-24": 50, "Apr-24": 62, "May-24": 72, "Jun-24": 75, "Jul-24": 49, "Aug-24": 83, "Sep-24": 76, "Oct-24": 91, "Nov-24": 77, "Dec-24": 70, "Jan-25": 70, "Feb-25": 68, "Mar-25": 46 }
+      },
+      {
+        label: "Z3-31 (Villa)",
+        account: "4300052",
+        zone: "Zone_03_(A)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3A (BULK ZONE 3A)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 115, "Feb-24": 105, "Mar-24": 86, "Apr-24": 81, "May-24": 140, "Jun-24": 135, "Jul-24": 151, "Aug-24": 258, "Sep-24": 222, "Oct-24": 37, "Nov-24": 164, "Dec-24": 176, "Jan-25": 165, "Feb-25": 133, "Mar-25": 30 }
+      },
+      {
+        label: "Z3-15 (Villa)",
+        account: "4300057",
+        zone: "Zone_03_(B)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3B (BULK ZONE 3B)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 53, "Feb-24": 39, "Mar-24": 32, "Apr-24": 31, "May-24": 34, "Jun-24": 45, "Jul-24": 43, "Aug-24": 31, "Sep-24": 37, "Oct-24": 45, "Nov-24": 36, "Dec-24": 36, "Jan-25": 40, "Feb-25": 41, "Mar-25": 35 }
+      },
+      {
+        label: "Z5-13",
+        account: "4300058",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 78, "Feb-24": 73, "Mar-24": 9, "Apr-24": 46, "May-24": 17, "Jun-24": 83, "Jul-24": 40, "Aug-24": 80, "Sep-24": 61, "Oct-24": 56, "Nov-24": 68, "Dec-24": 85, "Jan-25": 72, "Feb-25": 106, "Mar-25": 89 }
+      },
+      {
+        label: "Z5-14",
+        account: "4300059",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 68, "Feb-24": 56, "Mar-24": 52, "Apr-24": 250, "May-24": 128, "Jun-24": 100, "Jul-24": 12, "Aug-24": 20, "Sep-24": 22, "Oct-24": 22, "Nov-24": 62, "Dec-24": 72, "Jan-25": 71, "Feb-25": 93, "Mar-25": 77 }
+      },
+      {
+        label: "Z3-14 (Villa)",
+        account: "4300060",
+        zone: "Zone_03_(B)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3B (BULK ZONE 3B)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 55, "Feb-24": 45, "Mar-24": 42, "Apr-24": 57, "May-24": 66, "Jun-24": 27, "Jul-24": 31, "Aug-24": 11, "Sep-24": 16, "Oct-24": 27, "Nov-24": 30, "Dec-24": 173, "Jan-25": 166, "Feb-25": 102, "Mar-25": 30 }
+      },
+      {
+        label: "Z3-35 (Villa)",
+        account: "4300075",
+        zone: "Zone_03_(A)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3A (BULK ZONE 3A)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 82, "Feb-24": 78, "Mar-24": 77, "Apr-24": 67, "May-24": 91, "Jun-24": 54, "Jul-24": 58, "Aug-24": 70, "Sep-24": 78, "Oct-24": 92, "Nov-24": 83, "Dec-24": 69, "Jan-25": 65, "Feb-25": 61, "Mar-25": 52 }
+      },
+      {
+        label: "Z3-12 (Villa)",
+        account: "4300076",
+        zone: "Zone_03_(B)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3B (BULK ZONE 3B)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 52, "Feb-24": 95, "Mar-24": 258, "Apr-24": 55, "May-24": 67, "Jun-24": 111, "Jul-24": 93, "Aug-24": 120, "Sep-24": 118, "Oct-24": 178, "Nov-24": 55, "Dec-24": 67, "Jan-25": 73, "Feb-25": 59, "Mar-25": 54 }
+      },
+      {
+        label: "Z3-11 (Villa)",
+        account: "4300077",
+        zone: "Zone_03_(B)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3B (BULK ZONE 3B)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 2, "Mar-24": 0, "Apr-24": 0, "May-24": 1, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-4 (Villa)",
+        account: "4300078",
+        zone: "Zone_03_(B)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3B (BULK ZONE 3B)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 105, "Feb-24": 90, "Mar-24": 96, "Apr-24": 106, "May-24": 126, "Jun-24": 122, "Jul-24": 156, "Aug-24": 150, "Sep-24": 97, "Oct-24": 171, "Nov-24": 56, "Dec-24": 111, "Jan-25": 90, "Feb-25": 55, "Mar-25": 22 }
+      },
+      {
+        label: "Z3-40 (Villa)",
+        account: "4300079",
+        zone: "Zone_03_(A)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3A (BULK ZONE 3A)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 26, "Feb-24": 18, "Mar-24": 25, "Apr-24": 19, "May-24": 26, "Jun-24": 19, "Jul-24": 12, "Aug-24": 10, "Sep-24": 12, "Oct-24": 36, "Nov-24": 20, "Dec-24": 20, "Jan-25": 18, "Feb-25": 23, "Mar-25": 37 }
+      },
+      {
+        label: "Z3-17 (Villa)",
+        account: "4300080",
+        zone: "Zone_03_(B)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3B (BULK ZONE 3B)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 11, "Feb-24": 5, "Mar-24": 8, "Apr-24": 5, "May-24": 14, "Jun-24": 19, "Jul-24": 18, "Aug-24": 22, "Sep-24": 14, "Oct-24": 24, "Nov-24": 17, "Dec-24": 20, "Jan-25": 19, "Feb-25": 8, "Mar-25": 5 }
+      },
+      {
+        label: "Z3-30 (Villa)",
+        account: "4300081",
+        zone: "Zone_03_(A)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3A (BULK ZONE 3A)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 16, "Feb-24": 14, "Mar-24": 19, "Apr-24": 26, "May-24": 9, "Jun-24": 8, "Jul-24": 8, "Aug-24": 0, "Sep-24": 0, "Oct-24": 1, "Nov-24": 1, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 4 }
+      },
+      {
+        label: "Z3-33 (Villa)",
+        account: "4300082",
+        zone: "Zone_03_(A)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3A (BULK ZONE 3A)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 78, "Feb-24": 32, "Mar-24": 43, "Apr-24": 36, "May-24": 52, "Jun-24": 68, "Jul-24": 60, "Aug-24": 60, "Sep-24": 47, "Oct-24": 76, "Nov-24": 52, "Dec-24": 45, "Jan-25": 45, "Feb-25": 45, "Mar-25": 40 }
+      },
+      {
+        label: "Z3-18 (Villa)",
+        account: "4300083",
+        zone: "Zone_03_(B)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3B (BULK ZONE 3B)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 62, "Feb-24": 43, "Mar-24": 36, "Apr-24": 56, "May-24": 47, "Jun-24": 63, "Jul-24": 59, "Aug-24": 67, "Sep-24": 46, "Oct-24": 58, "Nov-24": 42, "Dec-24": 31, "Jan-25": 36, "Feb-25": 36, "Mar-25": 33 }
+      },
+      {
+        label: "Z3-36 (Villa)",
+        account: "4300084",
+        zone: "Zone_03_(A)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3A (BULK ZONE 3A)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 13, "Feb-24": 11, "Mar-24": 22, "Apr-24": 44, "May-24": 85, "Jun-24": 68, "Jul-24": 61, "Aug-24": 58, "Sep-24": 72, "Oct-24": 102, "Nov-24": 115, "Dec-24": 93, "Jan-25": 81, "Feb-25": 83, "Mar-25": 69 }
+      },
+      {
+        label: "Z3-32 (Villa)",
+        account: "4300085",
+        zone: "Zone_03_(A)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3A (BULK ZONE 3A)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 19, "Feb-24": 25, "Mar-24": 32, "Apr-24": 29, "May-24": 13, "Jun-24": 0, "Jul-24": 30, "Aug-24": 31, "Sep-24": 38, "Oct-24": 57, "Nov-24": 44, "Dec-24": 30, "Jan-25": 38, "Feb-25": 39, "Mar-25": 33 }
+      },
+      {
+        label: "Z3-39 (Villa)",
+        account: "4300086",
+        zone: "Zone_03_(A)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3A (BULK ZONE 3A)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 67, "Feb-24": 33, "Mar-24": 35, "Apr-24": 40, "May-24": 27, "Jun-24": 51, "Jul-24": 24, "Aug-24": 38, "Sep-24": 35, "Oct-24": 47, "Nov-24": 34, "Dec-24": 37, "Jan-25": 39, "Feb-25": 36, "Mar-25": 29 }
+      },
+      {
+        label: "Z3-34 (Villa)",
+        account: "4300087",
+        zone: "Zone_03_(A)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3A (BULK ZONE 3A)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 1, "Feb-24": 12, "Mar-24": 9, "Apr-24": 30, "May-24": 14, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 31, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-3 (Villa)",
+        account: "4300088",
+        zone: "Zone_03_(B)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3B (BULK ZONE 3B)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 78, "Feb-24": 66, "Mar-24": 80, "Apr-24": 91, "May-24": 84, "Jun-24": 84, "Jul-24": 83, "Aug-24": 61, "Sep-24": 67, "Oct-24": 78, "Nov-24": 69, "Dec-24": 86, "Jan-25": 66, "Feb-25": 59, "Mar-25": 63 }
+      },
+      {
+        label: "Z3-27 (Villa)",
+        account: "4300089",
+        zone: "Zone_03_(A)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3A (BULK ZONE 3A)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 8, "Jun-24": 0, "Jul-24": 5, "Aug-24": 0, "Sep-24": 4, "Oct-24": 0, "Nov-24": 8, "Dec-24": 59, "Jan-25": 15, "Feb-25": 32, "Mar-25": 55 }
+      },
+      {
+        label: "Z3-7 (Villa)",
+        account: "4300090",
+        zone: "Zone_03_(B)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3B (BULK ZONE 3B)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 27, "Feb-24": 23, "Mar-24": 14, "Apr-24": 21, "May-24": 30, "Jun-24": 46, "Jul-24": 23, "Aug-24": 43, "Sep-24": 24, "Oct-24": 50, "Nov-24": 34, "Dec-24": 31, "Jan-25": 38, "Feb-25": 45, "Mar-25": 46 }
+      },
+      {
+        label: "Z3-24 (Villa)",
+        account: "4300091",
+        zone: "Zone_03_(A)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3A (BULK ZONE 3A)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 10, "Feb-24": 8, "Mar-24": 10, "Apr-24": 7, "May-24": 15, "Jun-24": 7, "Jul-24": 6, "Aug-24": 7, "Sep-24": 4, "Oct-24": 5, "Nov-24": 4, "Dec-24": 15, "Jan-25": 18, "Feb-25": 39, "Mar-25": 78 }
+      },
+      {
+        label: "Z3-10 (Villa)",
+        account: "4300092",
+        zone: "Zone_03_(B)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3B (BULK ZONE 3B)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 37, "Feb-24": 32, "Mar-24": 31, "Apr-24": 35, "May-24": 47, "Jun-24": 34, "Jul-24": 40, "Aug-24": 56, "Sep-24": 41, "Oct-24": 60, "Nov-24": 33, "Dec-24": 37, "Jan-25": 78, "Feb-25": 81, "Mar-25": 62 }
+      },
+      {
+        label: "Z3-25 (Villa)",
+        account: "4300093",
+        zone: "Zone_03_(A)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3A (BULK ZONE 3A)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 15, "Feb-24": 12, "Mar-24": 9, "Apr-24": 9, "May-24": 25, "Jun-24": 11, "Jul-24": 15, "Aug-24": 6, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 3, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-1 (Villa)",
+        account: "4300094",
+        zone: "Zone_03_(B)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3B (BULK ZONE 3B)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 6, "Feb-24": 6, "Mar-24": 3, "Apr-24": 4, "May-24": 5, "Jun-24": 5, "Jul-24": 5, "Aug-24": 6, "Sep-24": 5, "Oct-24": 3, "Nov-24": 4, "Dec-24": 3, "Jan-25": 4, "Feb-25": 4, "Mar-25": 5 }
+      },
+      {
+        label: "Z3-26 (Villa)",
+        account: "4300095",
+        zone: "Zone_03_(A)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3A (BULK ZONE 3A)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 10, "Feb-24": 69, "Mar-24": 13, "Apr-24": 21, "May-24": 17, "Jun-24": 18, "Jul-24": 13, "Aug-24": 4, "Sep-24": 4, "Oct-24": 3, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-9 (Villa)",
+        account: "4300096",
+        zone: "Zone_03_(B)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3B (BULK ZONE 3B)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 68, "Feb-24": 57, "Mar-24": 76, "Apr-24": 32, "May-24": 17, "Jun-24": 40, "Jul-24": 38, "Aug-24": 100, "Sep-24": 60, "Oct-24": 57, "Nov-24": 70, "Dec-24": 71, "Jan-25": 67, "Feb-25": 49, "Mar-25": 55 }
+      },
+      {
+        label: "Z3-29 (Villa)",
+        account: "4300097",
+        zone: "Zone_03_(A)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3A (BULK ZONE 3A)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 12, "Feb-24": 5, "Mar-24": 9, "Apr-24": 12, "May-24": 9, "Jun-24": 9, "Jul-24": 7, "Aug-24": 1, "Sep-24": 0, "Oct-24": 2, "Nov-24": 0, "Dec-24": 1, "Jan-25": 0, "Feb-25": 7, "Mar-25": 3 }
+      },
+      {
+        label: "Z3-2 (Villa)",
+        account: "4300098",
+        zone: "Zone_03_(B)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3B (BULK ZONE 3B)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 111, "Feb-24": 114, "Mar-24": 97, "Apr-24": 110, "May-24": 57, "Jun-24": 129, "Jul-24": 113, "Aug-24": 88, "Sep-24": 74, "Oct-24": 89, "Nov-24": 52, "Dec-24": 17, "Jan-25": 6, "Feb-25": 6, "Mar-25": 8 }
+      },
+      {
+        label: "Z3-19 (Villa)",
+        account: "4300099",
+        zone: "Zone_03_(B)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3B (BULK ZONE 3B)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 38, "Feb-24": 11, "Mar-24": 9, "Apr-24": 16, "May-24": 15, "Jun-24": 6, "Jul-24": 6, "Aug-24": 9, "Sep-24": 6, "Oct-24": 5, "Nov-24": 11, "Dec-24": 13, "Jan-25": 138, "Feb-25": 6, "Mar-25": 26 }
+      },
+      {
+        label: "Z3-6 (Villa)",
+        account: "4300100",
+        zone: "Zone_03_(B)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3B (BULK ZONE 3B)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 34, "Feb-24": 21, "Mar-24": 29, "Apr-24": 32, "May-24": 34, "Jun-24": 45, "Jul-24": 49, "Aug-24": 57, "Sep-24": 39, "Oct-24": 49, "Nov-24": 40, "Dec-24": 34, "Jan-25": 31, "Feb-25": 33, "Mar-25": 38 }
+      },
+      {
+        label: "Z3-28 (Villa)",
+        account: "4300101",
+        zone: "Zone_03_(A)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3A (BULK ZONE 3A)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 32, "Feb-24": 2, "Mar-24": 3, "Apr-24": 21, "May-24": 45, "Jun-24": 44, "Jul-24": 45, "Aug-24": 46, "Sep-24": 46, "Oct-24": 59, "Nov-24": 36, "Dec-24": 41, "Jan-25": 44, "Feb-25": 38, "Mar-25": 30 }
+      },
+      {
+        label: "Z3-22 (Villa)",
+        account: "4300102",
+        zone: "Zone_03_(B)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3B (BULK ZONE 3B)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 24, "Feb-24": 20, "Mar-24": 17, "Apr-24": 19, "May-24": 22, "Jun-24": 20, "Jul-24": 36, "Aug-24": 22, "Sep-24": 15, "Oct-24": 20, "Nov-24": 15, "Dec-24": 23, "Jan-25": 32, "Feb-25": 14, "Mar-25": 53 }
+      },
+      {
+        label: "Z3-16 (Villa)",
+        account: "4300103",
+        zone: "Zone_03_(B)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3B (BULK ZONE 3B)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 43, "Feb-24": 14, "Mar-24": 16, "Apr-24": 10, "May-24": 38, "Jun-24": 6, "Jul-24": 1, "Aug-24": 21, "Sep-24": 6, "Oct-24": 2, "Nov-24": 3, "Dec-24": 5, "Jan-25": 1, "Feb-25": 28, "Mar-25": 2 }
+      },
+      {
+        label: "Z3-5 (Villa)",
+        account: "4300104",
+        zone: "Zone_03_(B)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3B (BULK ZONE 3B)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 52, "Feb-24": 63, "Mar-24": 47, "Apr-24": 58, "May-24": 42, "Jun-24": 24, "Jul-24": 68, "Aug-24": 44, "Sep-24": 40, "Oct-24": 34, "Nov-24": 26, "Dec-24": 34, "Jan-25": 40, "Feb-25": 51, "Mar-25": 42 }
+      },
+      {
+        label: "Z3-8 (Villa)",
+        account: "4300105",
+        zone: "Zone_03_(B)",
+        type: "Residential (Villa)",
+        parent: "ZONE 3B (BULK ZONE 3B)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 56, "Feb-24": 32, "Mar-24": 19, "Apr-24": 15, "May-24": 49, "Jun-24": 40, "Jul-24": 38, "Aug-24": 25, "Sep-24": 49, "Oct-24": 68, "Nov-24": 181, "Dec-24": 290, "Jan-25": 83, "Feb-25": 106, "Mar-25": 196 }
+      },
+      {
+        label: "Z5-5",
+        account: "4300146",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 1, "Feb-24": 2, "Mar-24": 0, "Apr-24": 3, "May-24": 1, "Jun-24": 8, "Jul-24": 3, "Aug-24": 0, "Sep-24": 2, "Oct-24": 13, "Nov-24": 4, "Dec-24": 3, "Jan-25": 3, "Feb-25": 6, "Mar-25": 2 }
+      },
+      {
+        label: "Z5-30",
+        account: "4300147",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 1, "Mar-24": 3, "Apr-24": 53, "May-24": 10, "Jun-24": 1, "Jul-24": 0, "Aug-24": 17, "Sep-24": 17, "Oct-24": 4, "Nov-24": 6, "Dec-24": 60, "Jan-25": 65, "Feb-25": 87, "Mar-25": 71 }
+      },
+      {
+        label: "Z5-2",
+        account: "4300148",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 2, "Feb-24": 2, "Mar-24": 0, "Apr-24": 0, "May-24": 3, "Jun-24": 3, "Jul-24": 1, "Aug-24": 1, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z5-10",
+        account: "4300149",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 6, "Oct-24": 3, "Nov-24": 0, "Dec-24": 4, "Jan-25": 37, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z5-4",
+        account: "4300150",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 54, "Feb-24": 40, "Mar-24": 98, "Apr-24": 36, "May-24": 30, "Jun-24": 52, "Jul-24": 110, "Aug-24": 85, "Sep-24": 32, "Oct-24": 38, "Nov-24": 86, "Dec-24": 100, "Jan-25": 81, "Feb-25": 98, "Mar-25": 35 }
+      },
+      {
+        label: "Z5-6",
+        account: "4300151",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 1, "Feb-24": 0, "Mar-24": 1, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 5, "Oct-24": 12, "Nov-24": 5, "Dec-24": 2, "Jan-25": 6, "Feb-25": 3, "Mar-25": 10 }
+      },
+      {
+        label: "Z5 020",
+        account: "4300152",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 26, "Feb-24": 13, "Mar-24": 13, "Apr-24": 20, "May-24": 18, "Jun-24": 34, "Jul-24": 51, "Aug-24": 3, "Sep-24": 1, "Oct-24": 0, "Nov-24": 28, "Dec-24": 24, "Jan-25": 25, "Feb-25": 30, "Mar-25": 147 }
+      },
+      {
+        label: "Z5-23",
+        account: "4300153",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 5, "May-24": 6, "Jun-24": 56, "Jul-24": 1, "Aug-24": 0, "Sep-24": 4, "Oct-24": 11, "Nov-24": 3, "Dec-24": 0, "Jan-25": 0, "Feb-25": 22, "Mar-25": 19 }
+      },
+      {
+        label: "Z5-15",
+        account: "4300154",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 39, "Feb-24": 33, "Mar-24": 33, "Apr-24": 27, "May-24": 41, "Jun-24": 60, "Jul-24": 47, "Aug-24": 40, "Sep-24": 36, "Oct-24": 51, "Nov-24": 40, "Dec-24": 37, "Jan-25": 35, "Feb-25": 19, "Mar-25": 16 }
+      },
+      {
+        label: "Z5-9",
+        account: "4300155",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 72, "Feb-24": 97, "Mar-24": 84, "Apr-24": 96, "May-24": 158, "Jun-24": 82, "Jul-24": 70, "Aug-24": 74, "Sep-24": 95, "Oct-24": 134, "Nov-24": 94, "Dec-24": 56, "Jan-25": 38, "Feb-25": 49, "Mar-25": 40 }
+      },
+      {
+        label: "Z5-26",
+        account: "4300156",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 2, "Sep-24": 0, "Oct-24": 12, "Nov-24": 18, "Dec-24": 25, "Jan-25": 61, "Feb-25": 41, "Mar-25": 16 }
+      },
+      {
+        label: "Z5-25",
+        account: "4300157",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 24, "Oct-24": 20, "Nov-24": 37, "Dec-24": 18, "Jan-25": 37, "Feb-25": 24, "Mar-25": 10 }
+      },
+      {
+        label: "Z5-31",
+        account: "4300158",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 7, "Feb-24": 20, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 189, "Aug-24": 68, "Sep-24": 61, "Oct-24": 0, "Nov-24": 0, "Dec-24": 14, "Jan-25": 33, "Feb-25": 24, "Mar-25": 14 }
+      },
+      {
+        label: "Z5-33",
+        account: "4300159",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 7, "Mar-24": 3, "Apr-24": 3, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 1, "Sep-24": 18, "Oct-24": 3, "Nov-24": 0, "Dec-24": 0, "Jan-25": 2, "Feb-25": 0, "Mar-25": 24 }
+      },
+      {
+        label: "Z5-29",
+        account: "4300160",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 1, "Sep-24": 0, "Oct-24": 68, "Nov-24": 15, "Dec-24": 21, "Jan-25": 49, "Feb-25": 66, "Mar-25": 21 }
+      },
+      {
+        label: "Z5-28",
+        account: "4300161",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 40, "Sep-24": 0, "Oct-24": 90, "Nov-24": 16, "Dec-24": 11, "Jan-25": 50, "Feb-25": 21, "Mar-25": 9 }
+      },
+      {
+        label: "Z5-32",
+        account: "4300162",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 2, "Mar-24": 2, "Apr-24": 3, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 1, "Sep-24": 47, "Oct-24": 1, "Nov-24": 3, "Dec-24": 1, "Jan-25": 59, "Feb-25": 119, "Mar-25": 71 }
+      },
+      {
+        label: "Z5-22",
+        account: "4300163",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 89, "Feb-24": 32, "Mar-24": 38, "Apr-24": 10, "May-24": 36, "Jun-24": 17, "Jul-24": 21, "Aug-24": 39, "Sep-24": 0, "Oct-24": 18, "Nov-24": 25, "Dec-24": 28, "Jan-25": 15, "Feb-25": 40, "Mar-25": 186 }
+      },
+      {
+        label: "Z5-7",
+        account: "4300164",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 2, "Feb-24": 2, "Mar-24": 1, "Apr-24": 2, "May-24": 2, "Jun-24": 6, "Jul-24": 2, "Aug-24": 0, "Sep-24": 2, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 26, "Mar-25": 14 }
+      },
+      {
+        label: "Z5-27",
+        account: "4300165",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 12, "Oct-24": 9, "Nov-24": 9, "Dec-24": 11, "Jan-25": 36, "Feb-25": 13, "Mar-25": 19 }
+      },
+      {
+        label: "Z5-12",
+        account: "4300166",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 59, "Feb-24": 78, "Mar-24": 49, "Apr-24": 39, "May-24": 89, "Jun-24": 105, "Jul-24": 90, "Aug-24": 90, "Sep-24": 84, "Oct-24": 112, "Nov-24": 89, "Dec-24": 71, "Jan-25": 44, "Feb-25": 47, "Mar-25": 40 }
+      },
+      {
+        label: "Z5 024",
+        account: "4300167",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 19, "Feb-24": 2, "Mar-24": 0, "Apr-24": 30, "May-24": 1, "Jun-24": 1, "Jul-24": 1, "Aug-24": 0, "Sep-24": 0, "Oct-24": 3, "Nov-24": 4, "Dec-24": 39, "Jan-25": 68, "Feb-25": 1, "Mar-25": 0 }
+      },
+      {
+        label: "Z5 016",
+        account: "4300168",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 306, "Feb-24": 64, "Mar-24": 6, "Apr-24": 10, "May-24": 34, "Jun-24": 118, "Jul-24": 363, "Aug-24": 347, "Sep-24": 16, "Oct-24": 85, "Nov-24": 67, "Dec-24": 57, "Jan-25": 27, "Feb-25": 29, "Mar-25": 37 }
+      },
+      {
+        label: "Z5-21",
+        account: "4300169",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 2, "Feb-24": 0, "Mar-24": 0, "Apr-24": 1, "May-24": 1, "Jun-24": 0, "Jul-24": 3, "Aug-24": 1, "Sep-24": 0, "Oct-24": 5, "Nov-24": 13, "Dec-24": 23, "Jan-25": 25, "Feb-25": 22, "Mar-25": 34 }
+      },
+      {
+        label: "Z5-3",
+        account: "4300170",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 1, "Feb-24": 1, "Mar-24": 0, "Apr-24": 0, "May-24": 1, "Jun-24": 5, "Jul-24": 24, "Aug-24": 28, "Sep-24": 68, "Oct-24": 116, "Nov-24": 205, "Dec-24": 141, "Jan-25": 149, "Feb-25": 86, "Mar-25": 67 }
+      },
+      {
+        label: "Z5 019",
+        account: "4300171",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 4, "Feb-24": 9, "Mar-24": 6, "Apr-24": 8, "May-24": 9, "Jun-24": 14, "Jul-24": 8, "Aug-24": 9, "Sep-24": 8, "Oct-24": 12, "Nov-24": 6, "Dec-24": 7, "Jan-25": 5, "Feb-25": 7, "Mar-25": 6 }
+      },
+      {
+        label: "Z5-1",
+        account: "4300172",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 3, "Mar-24": 8, "Apr-24": 7, "May-24": 43, "Jun-24": 0, "Jul-24": 1, "Aug-24": 6, "Sep-24": 88, "Oct-24": 8, "Nov-24": 5, "Dec-24": 5, "Jan-25": 5, "Feb-25": 5, "Mar-25": 4 }
+      },
+      {
+        label: "Z5-11",
+        account: "4300173",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 15, "Feb-24": 6, "Mar-24": 10, "Apr-24": 24, "May-24": 13, "Jun-24": 15, "Jul-24": 16, "Aug-24": 34, "Sep-24": 50, "Oct-24": 65, "Nov-24": 71, "Dec-24": 68, "Jan-25": 30, "Feb-25": 45, "Mar-25": 3 }
+      },
+      {
+        label: "Z5-18",
+        account: "4300174",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 5, "Feb-24": 13, "Mar-24": 11, "Apr-24": 10, "May-24": 12, "Jun-24": 26, "Jul-24": 10, "Aug-24": 15, "Sep-24": 35, "Oct-24": 23, "Nov-24": 23, "Dec-24": 18, "Jan-25": 8, "Feb-25": 12, "Mar-25": 11 }
+      },
+      {
+        label: "Z5-8",
+        account: "4300175",
+        zone: "Zone_05",
+        type: "Residential (Villa)",
+        parent: "ZONE 5 (Bulk Zone 5)",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 1, "Jul-24": 1, "Aug-24": 3, "Sep-24": 1, "Oct-24": 3, "Nov-24": 0, "Dec-24": 5, "Jan-25": 6, "Feb-25": 12, "Mar-25": 11 }
+      },
+      {
+        label: "Z8-1",
+        account: "4300188",
+        zone: "Zone_08",
+        type: "Residential (Villa)",
+        parent: "BULK ZONE 8",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 1, "Feb-25": 2, "Mar-25": 3 }
+      },
+      {
+        label: "Z8-2",
+        account: "4300189",
+        zone: "Zone_08",
+        type: "Residential (Villa)",
+        parent: "BULK ZONE 8",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z8-3",
+        account: "4300190",
+        zone: "Zone_08",
+        type: "Residential (Villa)",
+        parent: "BULK ZONE 8",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z8-4",
+        account: "4300191",
+        zone: "Zone_08",
+        type: "Residential (Villa)",
+        parent: "BULK ZONE 8",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z8-6",
+        account: "4300192",
+        zone: "Zone_08",
+        type: "Residential (Villa)",
+        parent: "BULK ZONE 8",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 3, "Nov-24": 0, "Dec-24": 0, "Jan-25": 1, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z8-7",
+        account: "4300193",
+        zone: "Zone_08",
+        type: "Residential (Villa)",
+        parent: "BULK ZONE 8",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z8-8",
+        account: "4300194",
+        zone: "Zone_08",
+        type: "Residential (Villa)",
+        parent: "BULK ZONE 8",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z8-10",
+        account: "4300195",
+        zone: "Zone_08",
+        type: "Residential (Villa)",
+        parent: "BULK ZONE 8",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z8-12",
+        account: "4300196",
+        zone: "Zone_08",
+        type: "Residential (Villa)",
+        parent: "BULK ZONE 8",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 109, "Feb-24": 148, "Mar-24": 169, "Apr-24": 235, "May-24": 180, "Jun-24": 235, "Jul-24": 237, "Aug-24": 442, "Sep-24": 661, "Oct-24": 417, "Nov-24": 223, "Dec-24": 287, "Jan-25": 236, "Feb-25": 192, "Mar-25": 249 }
+      },
+      {
+        label: "Z8-14",
+        account: "4300197",
+        zone: "Zone_08",
+        type: "Residential (Villa)",
+        parent: "BULK ZONE 8",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z8-15",
+        account: "4300198",
+        zone: "Zone_08",
+        type: "Residential (Villa)",
+        parent: "BULK ZONE 8",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 227, "Feb-24": 74, "Mar-24": 90, "Apr-24": 145, "May-24": 179, "Jun-24": 100, "Jul-24": 136, "Aug-24": 152, "Sep-24": 144, "Oct-24": 87, "Nov-24": 100, "Dec-24": 90, "Jan-25": 99, "Feb-25": 61, "Mar-25": 70 }
+      },
+      {
+        label: "Z8-16",
+        account: "4300199",
+        zone: "Zone_08",
+        type: "Residential (Villa)",
+        parent: "BULK ZONE 8",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 180, "Feb-24": 165, "Mar-24": 52, "Apr-24": 147, "May-24": 0, "Jun-24": 62, "Jul-24": 113, "Aug-24": 86, "Sep-24": 91, "Oct-24": 112, "Nov-24": 103, "Dec-24": 98, "Jan-25": 67, "Feb-25": 72, "Mar-25": 54 }
+      },
+      {
+        label: "Z8-17",
+        account: "4300200",
+        zone: "Zone_08",
+        type: "Residential (Villa)",
+        parent: "BULK ZONE 8",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 198, "Feb-24": 135, "Mar-24": 213, "Apr-24": 190, "May-24": 196, "Jun-24": 138, "Jul-24": 94, "Aug-24": 220, "Sep-24": 0, "Oct-24": 191, "Nov-24": 154, "Dec-24": 155, "Jan-25": 164, "Feb-25": 162, "Mar-25": 171 }
+      },
+      {
+        label: "Z8-5",
+        account: "4300287",
+        zone: "Zone_08",
+        type: "Residential (Villa)",
+        parent: "BULK ZONE 8",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 131, "Feb-24": 117, "Mar-24": 131, "Apr-24": 142, "May-24": 208, "Jun-24": 247, "Jul-24": 272, "Aug-24": 344, "Sep-24": 236, "Oct-24": 280, "Nov-24": 309, "Dec-24": 314, "Jan-25": 208, "Feb-25": 341, "Mar-25": 313 }
+      },
+      {
+        label: "Z8-9",
+        account: "4300288",
+        zone: "Zone_08",
+        type: "Residential (Villa)",
+        parent: "BULK ZONE 8",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 8, "Feb-24": 8, "Mar-24": 0, "Apr-24": 4, "May-24": 2, "Jun-24": 5, "Jul-24": 47, "Aug-24": 51, "Sep-24": 4, "Oct-24": 14, "Nov-24": 12, "Dec-24": 25, "Jan-25": 5, "Feb-25": 12, "Mar-25": 5 }
+      },
+      {
+        label: "Z8-18",
+        account: "4300289",
+        zone: "Zone_08",
+        type: "Residential (Villa)",
+        parent: "BULK ZONE 8",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 290, "Feb-24": 212, "Mar-24": 253, "Apr-24": 418, "May-24": 384, "Jun-24": 478, "Jul-24": 459, "Aug-24": 410, "Sep-24": 312, "Oct-24": 196, "Nov-24": 239, "Dec-24": 149, "Jan-25": 122, "Feb-25": 111, "Mar-25": 336 }
+      },
+      {
+        label: "Z8-19",
+        account: "4300290",
+        zone: "Zone_08",
+        type: "Residential (Villa)",
+        parent: "BULK ZONE 8",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 161, "Feb-24": 147, "Mar-24": 205, "Apr-24": 271, "May-24": 282, "Jun-24": 340, "Jul-24": 157, "Aug-24": 306, "Sep-24": 239, "Oct-24": 197, "Nov-24": 248, "Dec-24": 125, "Jan-25": 104, "Feb-25": 87, "Mar-25": 231 }
+      },
+      {
+        label: "Z8-20",
+        account: "4300291",
+        zone: "Zone_08",
+        type: "Residential (Villa)",
+        parent: "BULK ZONE 8",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 226, "Feb-24": 210, "Mar-24": 289, "Apr-24": 358, "May-24": 298, "Jun-24": 313, "Jul-24": 290, "Aug-24": 297, "Sep-24": 275, "Oct-24": 219, "Nov-24": 298, "Dec-24": 158, "Jan-25": 146, "Feb-25": 110, "Mar-25": 312 }
+      },
+      {
+        label: "Z8-21",
+        account: "4300292",
+        zone: "Zone_08",
+        type: "Residential (Villa)",
+        parent: "BULK ZONE 8",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 188, "Feb-24": 173, "Mar-24": 172, "Apr-24": 320, "May-24": 254, "Jun-24": 344, "Jul-24": 233, "Aug-24": 243, "Sep-24": 200, "Oct-24": 119, "Nov-24": 167, "Dec-24": 101, "Jan-25": 99, "Feb-25": 72, "Mar-25": 276 }
+      },
+      {
+        label: "Z8-22",
+        account: "4300293",
+        zone: "Zone_08",
+        type: "Residential (Villa)",
+        parent: "BULK ZONE 8",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 262, "Feb-24": 168, "Mar-24": 174, "Apr-24": 366, "May-24": 388, "Jun-24": 418, "Jul-24": 271, "Aug-24": 343, "Sep-24": 330, "Oct-24": 138, "Nov-24": 213, "Dec-24": 177, "Jan-25": 225, "Feb-25": 156, "Mar-25": 336 }
+      }
+    ]
+  },
+  residentialApart: {
+    id: "Residential (Apart)",
+    description: "Units within multi-dwelling apartment buildings, often with more consistent consumption patterns.",
+    meters: [
+      {
+        label: "Z3-46(5) (Building)",
+        account: "4300003",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-46 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 5, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-49(3) (Building)",
+        account: "4300004",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-49 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 1, "Feb-24": 1, "Mar-24": 22, "Apr-24": 30, "May-24": 18, "Jun-24": 6, "Jul-24": 7, "Aug-24": 11, "Sep-24": 7, "Oct-24": 10, "Nov-24": 9, "Dec-24": 5, "Jan-25": 10, "Feb-25": 15, "Mar-25": 11 }
+      },
+      {
+        label: "Z3-75(4) (Building)",
+        account: "4300006",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-75 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 14, "Mar-24": 3, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 7, "Dec-24": 6, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-46(3A) (Building)",
+        account: "4300007",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-46 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 13, "Feb-24": 7, "Mar-24": 6, "Apr-24": 25, "May-24": 27, "Jun-24": 30, "Jul-24": 35, "Aug-24": 41, "Sep-24": 29, "Oct-24": 44, "Nov-24": 32, "Dec-24": 43, "Jan-25": 38, "Feb-25": 35, "Mar-25": 15 }
+      },
+      {
+        label: "Z3-52(6) (Building)",
+        account: "4300008",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-52 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 27, "Feb-24": 22, "Mar-24": 19, "Apr-24": 28, "May-24": 27, "Jun-24": 27, "Jul-24": 298, "Aug-24": 58, "Sep-24": 14, "Oct-24": 18, "Nov-24": 17, "Dec-24": 8, "Jan-25": 10, "Feb-25": 9, "Mar-25": 9 }
+      },
+      {
+        label: "Z3-049(4) (Building)",
+        account: "4300010",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-49 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 11, "Feb-24": 1, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 4, "Jan-25": 8, "Feb-25": 1, "Mar-25": 8 }
+      },
+      {
+        label: "Z3-46(1A) (Building)",
+        account: "4300011",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-46 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 9, "Feb-24": 10, "Mar-24": 10, "Apr-24": 11, "May-24": 10, "Jun-24": 10, "Jul-24": 11, "Aug-24": 11, "Sep-24": 12, "Oct-24": 17, "Nov-24": 11, "Dec-24": 13, "Jan-25": 11, "Feb-25": 10, "Mar-25": 10 }
+      },
+      {
+        label: "Z3-47(2) (Building)",
+        account: "4300012",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-47  Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 2, "Aug-24": 2, "Sep-24": 3, "Oct-24": 1, "Nov-24": 3, "Dec-24": 1, "Jan-25": 1, "Feb-25": 1, "Mar-25": 1 }
+      },
+      {
+        label: "Z3-45(3A) (Building)",
+        account: "4300013",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-45 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 5, "Feb-24": 8, "Mar-24": 0, "Apr-24": 2, "May-24": 0, "Jun-24": 2, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 1, "Nov-24": 0, "Dec-24": 2, "Jan-25": 8, "Feb-25": 4, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-46(2A) (Building)",
+        account: "4300014",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-46 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-46(6) (Building)",
+        account: "4300015",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-46 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 3, "Feb-24": 2, "Mar-24": 1, "Apr-24": 1, "May-24": 3, "Jun-24": 3, "Jul-24": 2, "Aug-24": 2, "Sep-24": 2, "Oct-24": 2, "Nov-24": 1, "Dec-24": 2, "Jan-25": 3, "Feb-25": 1, "Mar-25": 1 }
+      },
+      {
+        label: "Z3-47(4) (Building)",
+        account: "4300016",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-47  Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 15, "Feb-24": 15, "Mar-24": 26, "Apr-24": 15, "May-24": 22, "Jun-24": 14, "Jul-24": 23, "Aug-24": 6, "Sep-24": 16, "Oct-24": 16, "Nov-24": 8, "Dec-24": 13, "Jan-25": 11, "Feb-25": 12, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-45(5) (Building)",
+        account: "4300017",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-45 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 4, "Feb-24": 3, "Mar-24": 2, "Apr-24": 10, "May-24": 6, "Jun-24": 8, "Jul-24": 9, "Aug-24": 3, "Sep-24": 7, "Oct-24": 22, "Nov-24": 15, "Dec-24": 10, "Jan-25": 5, "Feb-25": 3, "Mar-25": 2 }
+      },
+      {
+        label: "Z3-47(5) (Building)",
+        account: "4300018",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-47  Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 8, "Feb-24": 56, "Mar-24": 13, "Apr-24": 7, "May-24": 2, "Jun-24": 0, "Jul-24": 1, "Aug-24": 15, "Sep-24": 0, "Oct-24": 13, "Nov-24": 5, "Dec-24": 9, "Jan-25": 36, "Feb-25": 12, "Mar-25": 11 }
+      },
+      {
+        label: "Z3-45(6) (Building)",
+        account: "4300019",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-45 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 3, "Feb-24": 3, "Mar-24": 4, "Apr-24": 20, "May-24": 3, "Jun-24": 8, "Jul-24": 6, "Aug-24": 4, "Sep-24": 5, "Oct-24": 6, "Nov-24": 7, "Dec-24": 4, "Jan-25": 5, "Feb-25": 18, "Mar-25": 32 }
+      },
+      {
+        label: "Z3-50(4) (Building)",
+        account: "4300021",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-50 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 15, "Feb-24": 4, "Mar-24": 7, "Apr-24": 6, "May-24": 11, "Jun-24": 5, "Jul-24": 6, "Aug-24": 9, "Sep-24": 6, "Oct-24": 9, "Nov-24": 8, "Dec-24": 9, "Jan-25": 6, "Feb-25": 4, "Mar-25": 6 }
+      },
+      {
+        label: "Z3-74(3) (Building)",
+        account: "4300022",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-74 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 21, "Feb-24": 54, "Mar-24": 16, "Apr-24": 6, "May-24": 22, "Jun-24": 5, "Jul-24": 6, "Aug-24": 12, "Sep-24": 13, "Oct-24": 24, "Nov-24": 19, "Dec-24": 12, "Jan-25": 12, "Feb-25": 19, "Mar-25": 19 }
+      },
+      {
+        label: "Z3-45(4A) (Building)",
+        account: "4300026",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-45 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 1, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-50(5) (Building)",
+        account: "4300027",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-50 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 2, "Feb-24": 0, "Mar-24": 0, "Apr-24": 1, "May-24": 0, "Jun-24": 1, "Jul-24": 23, "Aug-24": 10, "Sep-24": 9, "Oct-24": 8, "Nov-24": 12, "Dec-24": 8, "Jan-25": 9, "Feb-25": 10, "Mar-25": 22 }
+      },
+      {
+        label: "Z3-50(6) (Building)",
+        account: "4300028",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-50 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 6, "Feb-24": 14, "Mar-24": 16, "Apr-24": 15, "May-24": 16, "Jun-24": 20, "Jul-24": 1, "Aug-24": 12, "Sep-24": 17, "Oct-24": 25, "Nov-24": 21, "Dec-24": 23, "Jan-25": 21, "Feb-25": 20, "Mar-25": 18 }
+      },
+      {
+        label: "Z3-52(4A) (Building)",
+        account: "4300029",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-52 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 1, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 1, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-44(1A) (Building)",
+        account: "4300030",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-44 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 20, "Apr-24": 25, "May-24": 23, "Jun-24": 7, "Jul-24": 0, "Aug-24": 0, "Sep-24": 2, "Oct-24": 9, "Nov-24": 8, "Dec-24": 5, "Jan-25": 11, "Feb-25": 11, "Mar-25": 10 }
+      },
+      {
+        label: "Z3-44(1B) (Building)",
+        account: "4300031",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-44 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-44(2A) (Building)",
+        account: "4300032",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-44 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 4, "Feb-24": 2, "Mar-24": 15, "Apr-24": 20, "May-24": 21, "Jun-24": 1, "Jul-24": 5, "Aug-24": 2, "Sep-24": 3, "Oct-24": 7, "Nov-24": 7, "Dec-24": 2, "Jan-25": 9, "Feb-25": 3, "Mar-25": 5 }
+      },
+      {
+        label: "Z3-44(2B) (Building)",
+        account: "4300033",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-44 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 7, "Feb-24": 3, "Mar-24": 8, "Apr-24": 3, "May-24": 4, "Jun-24": 2, "Jul-24": 2, "Aug-24": 4, "Sep-24": 5, "Oct-24": 9, "Nov-24": 5, "Dec-24": 8, "Jan-25": 7, "Feb-25": 7, "Mar-25": 7 }
+      },
+      {
+        label: "Z3-44(5) (Building)",
+        account: "4300034",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-44 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 148, "Feb-24": 135, "Mar-24": 126, "Apr-24": 99, "May-24": 15, "Jun-24": 25, "Jul-24": 61, "Aug-24": 132, "Sep-24": 115, "Oct-24": 249, "Nov-24": 208, "Dec-24": 135, "Jan-25": 118, "Feb-25": 139, "Mar-25": 38 }
+      },
+      {
+        label: "Z3-44(6) (Building)",
+        account: "4300035",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-44 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 36, "Feb-24": 20, "Mar-24": 19, "Apr-24": 16, "May-24": 13, "Jun-24": 9, "Jul-24": 7, "Aug-24": 9, "Sep-24": 17, "Oct-24": 39, "Nov-24": 33, "Dec-24": 33, "Jan-25": 34, "Feb-25": 37, "Mar-25": 31 }
+      },
+      {
+        label: "Z3-75(1) (Building)",
+        account: "4300036",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-75 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 6, "Jan-25": 1, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-75(3) (Building)",
+        account: "4300037",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-75 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 4, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 2, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 3, "Nov-24": 1, "Dec-24": 4, "Jan-25": 2, "Feb-25": 7, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-47(3) (Building)",
+        account: "4300039",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-47  Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 14, "Feb-24": 15, "Mar-24": 14, "Apr-24": 14, "May-24": 19, "Jun-24": 14, "Jul-24": 16, "Aug-24": 19, "Sep-24": 13, "Oct-24": 21, "Nov-24": 17, "Dec-24": 18, "Jan-25": 18, "Feb-25": 19, "Mar-25": 17 }
+      },
+      {
+        label: "Z3-48(3) (Building)",
+        account: "4300040",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-48 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 8, "Feb-24": 8, "Mar-24": 7, "Apr-24": 8, "May-24": 7, "Jun-24": 3, "Jul-24": 4, "Aug-24": 8, "Sep-24": 7, "Oct-24": 10, "Nov-24": 10, "Dec-24": 3, "Jan-25": 3, "Feb-25": 5, "Mar-25": 4 }
+      },
+      {
+        label: "Z3-48(6) (Building)",
+        account: "4300041",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-48 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 1, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 3, "Jul-24": 5, "Aug-24": 10, "Sep-24": 0, "Oct-24": 10, "Nov-24": 1, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-52(3A) (Building)",
+        account: "4300042",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-52 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 1, "Feb-24": 1, "Mar-24": 1, "Apr-24": 0, "May-24": 1, "Jun-24": 0, "Jul-24": 1, "Aug-24": 2, "Sep-24": 8, "Oct-24": 9, "Nov-24": 8, "Dec-24": 6, "Jan-25": 6, "Feb-25": 9, "Mar-25": 5 }
+      },
+      {
+        label: "Z3-46(4A) (Building)",
+        account: "4300043",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-46 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 1, "Feb-24": 1, "Mar-24": 1, "Apr-24": 1, "May-24": 1, "Jun-24": 1, "Jul-24": 0, "Aug-24": 0, "Sep-24": 1, "Oct-24": 3, "Nov-24": 1, "Dec-24": 0, "Jan-25": 4, "Feb-25": 1, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-74(5) (Building)",
+        account: "4300045",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-74 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 10, "Feb-24": 2, "Mar-24": 5, "Apr-24": 5, "May-24": 7, "Jun-24": 6, "Jul-24": 5, "Aug-24": 7, "Sep-24": 5, "Oct-24": 4, "Nov-24": 5, "Dec-24": 7, "Jan-25": 13, "Feb-25": 7, "Mar-25": 12 }
+      },
+      {
+        label: "Z3-74(6) (Building)",
+        account: "4300046",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-74 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 32, "Feb-24": 12, "Mar-24": 6, "Apr-24": 13, "May-24": 9, "Jun-24": 2, "Jul-24": 3, "Aug-24": 0, "Sep-24": 2, "Oct-24": 12, "Nov-24": 6, "Dec-24": 6, "Jan-25": 12, "Feb-25": 4, "Mar-25": 4 }
+      },
+      {
+        label: "Z3-50(3) (Building)",
+        account: "4300047",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-50 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 2, "Feb-24": 8, "Mar-24": 7, "Apr-24": 6, "May-24": 3, "Jun-24": 4, "Jul-24": 4, "Aug-24": 5, "Sep-24": 5, "Oct-24": 9, "Nov-24": 9, "Dec-24": 7, "Jan-25": 8, "Feb-25": 13, "Mar-25": 6 }
+      },
+      {
+        label: "Z3-48(5) (Building)",
+        account: "4300048",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-48 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 2, "Aug-24": 4, "Sep-24": 2, "Oct-24": 4, "Nov-24": 33, "Dec-24": 16, "Jan-25": 2, "Feb-25": 1, "Mar-25": 1 }
+      },
+      {
+        label: "Z3-47(6) (Building)",
+        account: "4300051",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-47  Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 18, "Feb-24": 19, "Mar-24": 27, "Apr-24": 15, "May-24": 10, "Jun-24": 12, "Jul-24": 6, "Aug-24": 6, "Sep-24": 16, "Oct-24": 13, "Nov-24": 23, "Dec-24": 27, "Jan-25": 29, "Feb-25": 14, "Mar-25": 16 }
+      },
+      {
+        label: "Z3-49(5) (Building)",
+        account: "4300053",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-49 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 3, "Feb-24": 6, "Mar-24": 1, "Apr-24": 1, "May-24": 2, "Jun-24": 0, "Jul-24": 0, "Aug-24": 2, "Sep-24": 1, "Oct-24": 10, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 5, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-62(6) (Building)",
+        account: "4300054",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-62 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 12, "Feb-24": 14, "Mar-24": 15, "Apr-24": 14, "May-24": 3, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 1, "Jan-25": 39, "Feb-25": 19, "Mar-25": 17 }
+      },
+      {
+        label: "Z3-75(5) (Building)",
+        account: "4300055",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-75 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 11, "Apr-24": 8, "May-24": 9, "Jun-24": 11, "Jul-24": 8, "Aug-24": 10, "Sep-24": 12, "Oct-24": 27, "Nov-24": 22, "Dec-24": 14, "Jan-25": 16, "Feb-25": 12, "Mar-25": 12 }
+      },
+      {
+        label: "Z3-52(5) (Building)",
+        account: "4300056",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-52 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 13, "Feb-24": 5, "Mar-24": 6, "Apr-24": 4, "May-24": 7, "Jun-24": 9, "Jul-24": 6, "Aug-24": 5, "Sep-24": 6, "Oct-24": 4, "Nov-24": 3, "Dec-24": 4, "Jan-25": 5, "Feb-25": 3, "Mar-25": 4 }
+      },
+      {
+        label: "Z3-49(6) (Building)",
+        account: "4300061",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-49 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 34, "Feb-24": 26, "Mar-24": 16, "Apr-24": 15, "May-24": 16, "Jun-24": 34, "Jul-24": 16, "Aug-24": 4, "Sep-24": 10, "Oct-24": 36, "Nov-24": 25, "Dec-24": 26, "Jan-25": 25, "Feb-25": 22, "Mar-25": 21 }
+      },
+      {
+        label: "Z3-62(1) (Building)",
+        account: "4300062",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-62 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 3, "Mar-24": 0, "Apr-24": 0, "May-24": 4, "Jun-24": 19, "Jul-24": 0, "Aug-24": 0, "Sep-24": 1, "Oct-24": 9, "Nov-24": 2, "Dec-24": 1, "Jan-25": 4, "Feb-25": 1, "Mar-25": 15 }
+      },
+      {
+        label: "Z3-75(6) (Building)",
+        account: "4300063",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-75 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 52, "Feb-24": 39, "Mar-24": 21, "Apr-24": 17, "May-24": 24, "Jun-24": 24, "Jul-24": 20, "Aug-24": 24, "Sep-24": 19, "Oct-24": 24, "Nov-24": 40, "Dec-24": 34, "Jan-25": 35, "Feb-25": 32, "Mar-25": 35 }
+      },
+      {
+        label: "Z3-53(4B) (Building)",
+        account: "4300064",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-53 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-60(1B) (Building)",
+        account: "4300065",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-60 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 12, "Feb-24": 9, "Mar-24": 10, "Apr-24": 8, "May-24": 9, "Jun-24": 7, "Jul-24": 11, "Aug-24": 10, "Sep-24": 10, "Oct-24": 15, "Nov-24": 12, "Dec-24": 14, "Jan-25": 14, "Feb-25": 14, "Mar-25": 9 }
+      },
+      {
+        label: "Z3-59(4B) (Building)",
+        account: "4300066",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-59 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 10, "Feb-24": 8, "Mar-24": 9, "Apr-24": 10, "May-24": 8, "Jun-24": 8, "Jul-24": 8, "Aug-24": 8, "Sep-24": 1, "Oct-24": 1, "Nov-24": 0, "Dec-24": 1, "Jan-25": 3, "Feb-25": 3, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-60(3B) (Building)",
+        account: "4300067",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-60 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 2, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-60(4B) (Building)",
+        account: "4300068",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-60 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 7, "Feb-24": 4, "Mar-24": 4, "Apr-24": 3, "May-24": 6, "Jun-24": 5, "Jul-24": 5, "Aug-24": 4, "Sep-24": 4, "Oct-24": 4, "Nov-24": 0, "Dec-24": 0, "Jan-25": 1, "Feb-25": 3, "Mar-25": 5 }
+      },
+      {
+        label: "Z3-52(2A) (Building)",
+        account: "4300069",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-52 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 1, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 2, "Nov-24": 0, "Dec-24": 2, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-58(1B) (Building)",
+        account: "4300070",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-58 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 8, "Feb-24": 9, "Mar-24": 1, "Apr-24": 1, "May-24": 0, "Jun-24": 2, "Jul-24": 2, "Aug-24": 1, "Sep-24": 2, "Oct-24": 2, "Nov-24": 1, "Dec-24": 1, "Jan-25": 2, "Feb-25": 2, "Mar-25": 1 }
+      },
+      {
+        label: "Z3-55(1B) (Building)",
+        account: "4300071",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-55 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 2, "Feb-24": 2, "Mar-24": 3, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 1, "Sep-24": 0, "Oct-24": 0, "Nov-24": 3, "Dec-24": 4, "Jan-25": 3, "Feb-25": 4, "Mar-25": 3 }
+      },
+      {
+        label: "Z3-60(2B) (Building)",
+        account: "4300072",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-60 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 1, "Feb-24": 2, "Mar-24": 0, "Apr-24": 1, "May-24": 0, "Jun-24": 1, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 1, "Nov-24": 2, "Dec-24": 4, "Jan-25": 3, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-59(3A) (Building)",
+        account: "4300073",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-59 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-53(6) (Building)",
+        account: "4300074",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-53 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 3, "Apr-24": 1, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 1, "Oct-24": 1, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-74(1) (Building)",
+        account: "4300106",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-74 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 7, "Feb-24": 7, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 9, "Nov-24": 6, "Dec-24": 1, "Jan-25": 1, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-49(1) (Building)",
+        account: "4300107",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-49 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 4, "Mar-25": 3 }
+      },
+      {
+        label: "Z3-49(2) (Building)",
+        account: "4300108",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-49 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 11, "Feb-24": 15, "Mar-24": 7, "Apr-24": 6, "May-24": 9, "Jun-24": 11, "Jul-24": 11, "Aug-24": 14, "Sep-24": 12, "Oct-24": 11, "Nov-24": 11, "Dec-24": 12, "Jan-25": 15, "Feb-25": 15, "Mar-25": 12 }
+      },
+      {
+        label: "Z3-50(1) (Building)",
+        account: "4300109",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-50 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 32, "Feb-24": 32, "Mar-24": 36, "Apr-24": 26, "May-24": 35, "Jun-24": 45, "Jul-24": 1, "Aug-24": 43, "Sep-24": 24, "Oct-24": 53, "Nov-24": 32, "Dec-24": 34, "Jan-25": 22, "Feb-25": 26, "Mar-25": 28 }
+      },
+      {
+        label: "Z3-45(1A) (Building)",
+        account: "4300110",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-45 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 8, "Feb-24": 0, "Mar-24": 1, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 1, "Sep-24": 0, "Oct-24": 1, "Nov-24": 1, "Dec-24": 1, "Jan-25": 0, "Feb-25": 1, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-51(1) (Building)",
+        account: "4300111",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-51 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 12, "Feb-24": 13, "Mar-24": 13, "Apr-24": 11, "May-24": 18, "Jun-24": 29, "Jul-24": 1, "Aug-24": 0, "Sep-24": 0, "Oct-24": 1, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-51(2) (Building)",
+        account: "4300112",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-51 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 17, "Feb-24": 21, "Mar-24": 20, "Apr-24": 17, "May-24": 17, "Jun-24": 19, "Jul-24": 19, "Aug-24": 24, "Sep-24": 24, "Oct-24": 39, "Nov-24": 29, "Dec-24": 29, "Jan-25": 32, "Feb-25": 28, "Mar-25": 31 }
+      },
+      {
+        label: "Z3-45(2A) (Building)",
+        account: "4300113",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-45 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 8, "Mar-24": 2, "Apr-24": 6, "May-24": 5, "Jun-24": 0, "Jul-24": 1, "Aug-24": 0, "Sep-24": 0, "Oct-24": 5, "Nov-24": 9, "Dec-24": 2, "Jan-25": 2, "Feb-25": 7, "Mar-25": 9 }
+      },
+      {
+        label: "Z3-050(2) (Building)",
+        account: "4300114",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-50 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 2, "Feb-24": 3, "Mar-24": 4, "Apr-24": 5, "May-24": 2, "Jun-24": 1, "Jul-24": 0, "Aug-24": 3, "Sep-24": 0, "Oct-24": 0, "Nov-24": 2, "Dec-24": 1, "Jan-25": 0, "Feb-25": 8, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-47(1) (Building)",
+        account: "4300115",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-47  Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 5, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 1, "Sep-24": 15, "Oct-24": 13, "Nov-24": 17, "Dec-24": 9, "Jan-25": 9, "Feb-25": 11, "Mar-25": 10 }
+      },
+      {
+        label: "Z3-52(1A) (Building)",
+        account: "4300116",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-52 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 5, "Feb-24": 6, "Mar-24": 4, "Apr-24": 4, "May-24": 4, "Jun-24": 5, "Jul-24": 5, "Aug-24": 6, "Sep-24": 8, "Oct-24": 14, "Nov-24": 16, "Dec-24": 17, "Jan-25": 19, "Feb-25": 14, "Mar-25": 5 }
+      },
+      {
+        label: "Z3-48(1) (Building)",
+        account: "4300117",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-48 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 2, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 1, "Aug-24": 0, "Sep-24": 0, "Oct-24": 1, "Nov-24": 28, "Dec-24": 8, "Jan-25": 3, "Feb-25": 5, "Mar-25": 4 }
+      },
+      {
+        label: "Z3-74(2) (Building)",
+        account: "4300118",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-74 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 6, "Jun-24": 18, "Jul-24": 11, "Aug-24": 0, "Sep-24": 0, "Oct-24": 1, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-62(2) (Building)",
+        account: "4300119",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-62 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 1, "Mar-24": 0, "Apr-24": 16, "May-24": 10, "Jun-24": 9, "Jul-24": 7, "Aug-24": 17, "Sep-24": 10, "Oct-24": 14, "Nov-24": 5, "Dec-24": 17, "Jan-25": 7, "Feb-25": 10, "Mar-25": 8 }
+      },
+      {
+        label: "Z3-58(5) (Building)",
+        account: "4300120",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-58 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 79, "Feb-24": 43, "Mar-24": 12, "Apr-24": 31, "May-24": 32, "Jun-24": 32, "Jul-24": 22, "Aug-24": 29, "Sep-24": 25, "Oct-24": 36, "Nov-24": 29, "Dec-24": 29, "Jan-25": 29, "Feb-25": 23, "Mar-25": 32 }
+      },
+      {
+        label: "Z3-51(3) (Building)",
+        account: "4300121",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-51 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 7, "Feb-24": 5, "Mar-24": 6, "Apr-24": 20, "May-24": 24, "Jun-24": 4, "Jul-24": 6, "Aug-24": 8, "Sep-24": 9, "Oct-24": 11, "Nov-24": 14, "Dec-24": 12, "Jan-25": 13, "Feb-25": 10, "Mar-25": 9 }
+      },
+      {
+        label: "Z3-75(2) (Building)",
+        account: "4300122",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-75 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 3, "Feb-24": 2, "Mar-24": 2, "Apr-24": 1, "May-24": 2, "Jun-24": 5, "Jul-24": 19, "Aug-24": 7, "Sep-24": 0, "Oct-24": 0, "Nov-24": 12, "Dec-24": 5, "Jan-25": 7, "Feb-25": 7, "Mar-25": 9 }
+      },
+      {
+        label: "Z3-48(2) (Building)",
+        account: "4300123",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-48 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 2, "Mar-24": 2, "Apr-24": 3, "May-24": 5, "Jun-24": 2, "Jul-24": 8, "Aug-24": 3, "Sep-24": 4, "Oct-24": 11, "Nov-24": 2, "Dec-24": 5, "Jan-25": 3, "Feb-25": 0, "Mar-25": 4 }
+      },
+      {
+        label: "Z3-62(3) (Building)",
+        account: "4300124",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-62 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 1, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-74(4) (Building)",
+        account: "4300125",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-74 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 7, "Feb-24": 17, "Mar-24": 23, "Apr-24": 27, "May-24": 33, "Jun-24": 29, "Jul-24": 28, "Aug-24": 24, "Sep-24": 3, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 2, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-51(4) (Building)",
+        account: "4300127",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-51 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 20, "Feb-24": 15, "Mar-24": 13, "Apr-24": 12, "May-24": 9, "Jun-24": 12, "Jul-24": 11, "Aug-24": 11, "Sep-24": 9, "Oct-24": 15, "Nov-24": 9, "Dec-24": 9, "Jan-25": 11, "Feb-25": 9, "Mar-25": 12 }
+      },
+      {
+        label: "Z3-051(5) (Building)",
+        account: "4300128",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-51 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 3, "Feb-24": 0, "Mar-24": 61, "Apr-24": 0, "May-24": 2, "Jun-24": 4, "Jul-24": 5, "Aug-24": 8, "Sep-24": 0, "Oct-24": 0, "Nov-24": 1, "Dec-24": 1, "Jan-25": 2, "Feb-25": 5, "Mar-25": 19 }
+      },
+      {
+        label: "Z3-62(4) (Building)",
+        account: "4300129",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-62 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 12, "Feb-24": 8, "Mar-24": 28, "Apr-24": 39, "May-24": 28, "Jun-24": 21, "Jul-24": 39, "Aug-24": 49, "Sep-24": 33, "Oct-24": 2, "Nov-24": 0, "Dec-24": 2, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-58(3B) (Building)",
+        account: "4300130",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-58 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 3, "Jul-24": 2, "Aug-24": 6, "Sep-24": 1, "Oct-24": 9, "Nov-24": 6, "Dec-24": 6, "Jan-25": 6, "Feb-25": 6, "Mar-25": 3 }
+      },
+      {
+        label: "Z3-48(4) (Building)",
+        account: "4300131",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-48 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 13, "Feb-24": 17, "Mar-24": 14, "Apr-24": 16, "May-24": 2, "Jun-24": 2, "Jul-24": 7, "Aug-24": 0, "Sep-24": 0, "Oct-24": 3, "Nov-24": 4, "Dec-24": 3, "Jan-25": 5, "Feb-25": 5, "Mar-25": 5 }
+      },
+      {
+        label: "Z3-058(4B) (Building)",
+        account: "4300132",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-58 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 20, "Feb-24": 7, "Mar-24": 6, "Apr-24": 4, "May-24": 4, "Jun-24": 5, "Jul-24": 3, "Aug-24": 5, "Sep-24": 7, "Oct-24": 5, "Nov-24": 7, "Dec-24": 4, "Jan-25": 9, "Feb-25": 8, "Mar-25": 4 }
+      },
+      {
+        label: "Z3-62(5) (Building)",
+        account: "4300133",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-62 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-51(6) (Building)",
+        account: "4300134",
+        zone: "Zone_03_(A)",
+        type: "Residential (Apart)",
+        parent: "D-51 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 6, "Feb-24": 0, "Mar-24": 0, "Apr-24": 9, "May-24": 3, "Jun-24": 4, "Jul-24": 10, "Aug-24": 4, "Sep-24": 3, "Oct-24": 9, "Nov-24": 9, "Dec-24": 18, "Jan-25": 8, "Feb-25": 2, "Mar-25": 5 }
+      },
+      {
+        label: "Z3-53(1A) (Building)",
+        account: "4300210",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-53 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 3, "Feb-24": 10, "Mar-24": 5, "Apr-24": 9, "May-24": 9, "Jun-24": 7, "Jul-24": 5, "Aug-24": 8, "Sep-24": 9, "Oct-24": 13, "Nov-24": 6, "Dec-24": 7, "Jan-25": 8, "Feb-25": 9, "Mar-25": 10 }
+      },
+      {
+        label: "Z3-53(1B) (Building)",
+        account: "4300211",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-53 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 11, "Feb-24": 10, "Mar-24": 4, "Apr-24": 4, "May-24": 1, "Jun-24": 9, "Jul-24": 5, "Aug-24": 5, "Sep-24": 3, "Oct-24": 9, "Nov-24": 12, "Dec-24": 12, "Jan-25": 6, "Feb-25": 8, "Mar-25": 6 }
+      },
+      {
+        label: "Z3-53(2A) (Building)",
+        account: "4300212",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-53 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 1, "Feb-24": 0, "Mar-24": 3, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-53(2B) (Building)",
+        account: "4300213",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-53 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-53(3A) (Building)",
+        account: "4300214",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-53 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 8, "Feb-24": 8, "Mar-24": 4, "Apr-24": 6, "May-24": 2, "Jun-24": 8, "Jul-24": 4, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 1, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-53(3B) (Building)",
+        account: "4300215",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-53 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 1, "Dec-24": 4, "Jan-25": 1, "Feb-25": 3, "Mar-25": 1 }
+      },
+      {
+        label: "Z3-53(4A) (Building)",
+        account: "4300216",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-53 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 6, "Feb-24": 6, "Mar-24": 3, "Apr-24": 1, "May-24": 0, "Jun-24": 7, "Jul-24": 0, "Aug-24": 2, "Sep-24": 5, "Oct-24": 7, "Nov-24": 5, "Dec-24": 3, "Jan-25": 0, "Feb-25": 5, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-53(5) (Building)",
+        account: "4300217",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-53 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 2, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 3, "Nov-24": 2, "Dec-24": 2, "Jan-25": 2, "Feb-25": 1, "Mar-25": 1 }
+      },
+      {
+        label: "Z3-54(1A) (Building)",
+        account: "4300218",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-54 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 12, "Feb-24": 6, "Mar-24": 10, "Apr-24": 11, "May-24": 16, "Jun-24": 12, "Jul-24": 7, "Aug-24": 5, "Sep-24": 7, "Oct-24": 10, "Nov-24": 9, "Dec-24": 14, "Jan-25": 11, "Feb-25": 12, "Mar-25": 8 }
+      },
+      {
+        label: "Z3-54(1B) (Building)",
+        account: "4300219",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-54 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 1, "Apr-24": 0, "May-24": 2, "Jun-24": 1, "Jul-24": 1, "Aug-24": 0, "Sep-24": 1, "Oct-24": 0, "Nov-24": 2, "Dec-24": 1, "Jan-25": 1, "Feb-25": 1, "Mar-25": 5 }
+      },
+      {
+        label: "Z3-54(2A) (Building)",
+        account: "4300220",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-54 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 2, "Feb-24": 4, "Mar-24": 3, "Apr-24": 0, "May-24": 0, "Jun-24": 3, "Jul-24": 16, "Aug-24": 2, "Sep-24": 1, "Oct-24": 2, "Nov-24": 4, "Dec-24": 3, "Jan-25": 3, "Feb-25": 3, "Mar-25": 3 }
+      },
+      {
+        label: "Z3-54(2B) (Building)",
+        account: "4300221",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-54 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 8, "Feb-24": 8, "Mar-24": 8, "Apr-24": 5, "May-24": 10, "Jun-24": 9, "Jul-24": 7, "Aug-24": 2, "Sep-24": 4, "Oct-24": 15, "Nov-24": 18, "Dec-24": 19, "Jan-25": 20, "Feb-25": 9, "Mar-25": 19 }
+      },
+      {
+        label: "Z3-54(3A) (Building)",
+        account: "4300222",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-54 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 8, "Feb-24": 9, "Mar-24": 7, "Apr-24": 7, "May-24": 9, "Jun-24": 6, "Jul-24": 8, "Aug-24": 8, "Sep-24": 7, "Oct-24": 10, "Nov-24": 10, "Dec-24": 6, "Jan-25": 8, "Feb-25": 8, "Mar-25": 3 }
+      },
+      {
+        label: "Z3-54(3B) (Building)",
+        account: "4300223",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-54 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 5, "Mar-24": 6, "Apr-24": 9, "May-24": 1, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 3, "Nov-24": 11, "Dec-24": 1, "Jan-25": 1, "Feb-25": 1, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-54(4A) (Building)",
+        account: "4300224",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-54 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 3, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 4, "Aug-24": 3, "Sep-24": 0, "Oct-24": 0, "Nov-24": 4, "Dec-24": 2, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-54(4B) (Building)",
+        account: "4300225",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-54 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 1, "Apr-24": 2, "May-24": 1, "Jun-24": 3, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 1, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 1 }
+      },
+      {
+        label: "Z3-54(5) (Building)",
+        account: "4300226",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-54 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 18, "Feb-24": 20, "Mar-24": 18, "Apr-24": 21, "May-24": 21, "Jun-24": 21, "Jul-24": 18, "Aug-24": 17, "Sep-24": 19, "Oct-24": 21, "Nov-24": 16, "Dec-24": 16, "Jan-25": 15, "Feb-25": 18, "Mar-25": 11 }
+      },
+      {
+        label: "Z3-54(6) (Building)",
+        account: "4300227",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-54 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 1, "Feb-24": 1, "Mar-24": 2, "Apr-24": 7, "May-24": 2, "Jun-24": 1, "Jul-24": 2, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 20, "Dec-24": 3, "Jan-25": 5, "Feb-25": 4, "Mar-25": 4 }
+      },
+      {
+        label: "Z3-55(1A) (Building)",
+        account: "4300228",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-55 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 4, "Apr-24": 1, "May-24": 1, "Jun-24": 0, "Jul-24": 1, "Aug-24": 4, "Sep-24": 0, "Oct-24": 0, "Nov-24": 0, "Dec-24": 0, "Jan-25": 0, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-55(2A) (Building)",
+        account: "4300229",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-55 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 26, "Feb-24": 23, "Mar-24": 19, "Apr-24": 23, "May-24": 25, "Jun-24": 25, "Jul-24": 27, "Aug-24": 24, "Sep-24": 16, "Oct-24": 24, "Nov-24": 21, "Dec-24": 24, "Jan-25": 23, "Feb-25": 24, "Mar-25": 5 }
+      },
+      {
+        label: "Z3-55(2B) (Building)",
+        account: "4300230",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-55 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 2, "Feb-24": 4, "Mar-24": 4, "Apr-24": 7, "May-24": 5, "Jun-24": 2, "Jul-24": 6, "Aug-24": 6, "Sep-24": 2, "Oct-24": 3, "Nov-24": 5, "Dec-24": 4, "Jan-25": 3, "Feb-25": 4, "Mar-25": 5 }
+      },
+      {
+        label: "Z3-55(3A) (Building)",
+        account: "4300231",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-55 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 1, "Feb-24": 2, "Mar-24": 1, "Apr-24": 0, "May-24": 2, "Jun-24": 2, "Jul-24": 9, "Aug-24": 18, "Sep-24": 11, "Oct-24": 10, "Nov-24": 12, "Dec-24": 11, "Jan-25": 17, "Feb-25": 8, "Mar-25": 4 }
+      },
+      {
+        label: "Z3-55(3B) (Building)",
+        account: "4300232",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-55 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 1, "Feb-24": 5, "Mar-24": 6, "Apr-24": 6, "May-24": 3, "Jun-24": 8, "Jul-24": 2, "Aug-24": 6, "Sep-24": 8, "Oct-24": 8, "Nov-24": 6, "Dec-24": 3, "Jan-25": 7, "Feb-25": 3, "Mar-25": 5 }
+      },
+      {
+        label: "Z3-55(4A) (Building)",
+        account: "4300233",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-55 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 8, "Feb-24": 7, "Mar-24": 8, "Apr-24": 10, "May-24": 6, "Jun-24": 1, "Jul-24": 4, "Aug-24": 11, "Sep-24": 7, "Oct-24": 10, "Nov-24": 8, "Dec-24": 5, "Jan-25": 4, "Feb-25": 7, "Mar-25": 7 }
+      },
+      {
+        label: "Z3-55(4B) (Building)",
+        account: "4300234",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-55 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 9, "Feb-24": 8, "Mar-24": 10, "Apr-24": 8, "May-24": 7, "Jun-24": 1, "Jul-24": 1, "Aug-24": 4, "Sep-24": 2, "Oct-24": 5, "Nov-24": 4, "Dec-24": 5, "Jan-25": 6, "Feb-25": 5, "Mar-25": 5 }
+      },
+      {
+        label: "Z3-55(5) (Building)",
+        account: "4300235",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-55 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 2, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 0, "Nov-24": 1, "Dec-24": 1, "Jan-25": 0, "Feb-25": 1, "Mar-25": 1 }
+      },
+      {
+        label: "Z3-55(6) (Building)",
+        account: "4300236",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-55 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 46, "Feb-24": 41, "Mar-24": 33, "Apr-24": 50, "May-24": 66, "Jun-24": 72, "Jul-24": 16, "Aug-24": 2, "Sep-24": 14, "Oct-24": 41, "Nov-24": 20, "Dec-24": 4, "Jan-25": 7, "Feb-25": 5, "Mar-25": 68 }
+      },
+      {
+        label: "Z3-56(1A) (Building)",
+        account: "4300237",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-56 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 5, "Feb-24": 8, "Mar-24": 3, "Apr-24": 4, "May-24": 4, "Jun-24": 3, "Jul-24": 2, "Aug-24": 1, "Sep-24": 1, "Oct-24": 4, "Nov-24": 3, "Dec-24": 174, "Jan-25": 50, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-56(1B) (Building)",
+        account: "4300238",
+        zone: "Zone_03_(B)",
+        type: "Residential (Apart)",
+        parent: "D-56 Building Bulk Meter",
+        hierarchyLabel: "L3",
+        consumption: { "Jan-24": 0, "Feb-24": 0, "Mar-24": 0, "Apr-24": 0, "May-24": 0, "Jun-24": 0, "Jul-24": 0, "Aug-24": 0, "Sep-24": 0, "Oct-24": 1, "Nov-24": 0, "Dec-24": 0, "Jan-25": 1, "Feb-25": 0, "Mar-25": 0 }
+      },
+      {
+        label: "Z3-56(2A) (Building)",
+        account: "4300239",
+        zone:

@@ -16,115 +16,9 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts"
-import { Clock, ArrowDownRight, Filter, Download, RefreshCw, Droplet } from "lucide-react"
-
-// Water Balance Table Component
-const WaterBalanceTable = ({ data, year }) => {
-  // Filter months based on year
-  const months =
-    year === "2025"
-      ? ["Jan-25", "Feb-25", "Mar-25"]
-      : [
-          "Jan-24",
-          "Feb-24",
-          "Mar-24",
-          "Apr-24",
-          "May-24",
-          "Jun-24",
-          "Jul-24",
-          "Aug-24",
-          "Sep-24",
-          "Oct-24",
-          "Nov-24",
-          "Dec-24",
-        ]
-
-  // Format numbers for display
-  const formatNumber = (num) => {
-    if (typeof num !== "number" || isNaN(num)) return "0"
-    return Math.round(num).toLocaleString()
-  }
-
-  return (
-    <div className="overflow-x-auto">
-      <table className="min-w-full divide-y divide-gray-200 text-sm">
-        <thead className="bg-gray-50">
-          <tr>
-            <th scope="col" className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Month
-            </th>
-            <th scope="col" className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              L1
-            </th>
-            <th scope="col" className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              L2 (Modified)
-            </th>
-            <th scope="col" className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              L3 (Modified)
-            </th>
-            <th scope="col" className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Stage 1 Loss
-            </th>
-            <th scope="col" className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Stage 2 Loss
-            </th>
-            <th scope="col" className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Total Loss
-            </th>
-          </tr>
-        </thead>
-        <tbody className="bg-white divide-y divide-gray-200">
-          {months.map((month) => {
-            // Calculate metrics for this month
-            const l1Meter = data.find((row) => row.Label === "L1")
-            const l1Value = l1Meter ? l1Meter[month] || 0 : 0
-
-            let l2Native = 0
-            let l3NativeExcl = 0
-            let dcSum = 0
-
-            data.forEach((row) => {
-              const value = row[month] || 0
-
-              // Skip problematic meter
-              if (row["Acct #"] === "4300322") return
-
-              if (row.Label === "L2") {
-                l2Native += value
-              }
-
-              if (row.Label === "DC") {
-                dcSum += value
-              }
-
-              if (row.Label === "L3" && row["Acct #"] !== "4300322") {
-                l3NativeExcl += value
-              }
-            })
-
-            const l2Modified = l2Native + dcSum
-            const l3Modified = l3NativeExcl + dcSum
-            const stage1Loss = l1Value - l2Modified
-            const stage2Loss = l2Native - l3NativeExcl
-            const totalLoss = l1Value - l3Modified
-
-            return (
-              <tr key={month}>
-                <td className="px-3 py-3 whitespace-nowrap text-left">{month}</td>
-                <td className="px-3 py-3 whitespace-nowrap text-left">{formatNumber(l1Value)}</td>
-                <td className="px-3 py-3 whitespace-nowrap text-left">{formatNumber(l2Modified)}</td>
-                <td className="px-3 py-3 whitespace-nowrap text-left">{formatNumber(l3Modified)}</td>
-                <td className="px-3 py-3 whitespace-nowrap text-left">{formatNumber(stage1Loss)}</td>
-                <td className="px-3 py-3 whitespace-nowrap text-left">{formatNumber(stage2Loss)}</td>
-                <td className="px-3 py-3 whitespace-nowrap text-left">{formatNumber(totalLoss)}</td>
-              </tr>
-            )
-          })}
-        </tbody>
-      </table>
-    </div>
-  )
-}
+import { Clock, ArrowDownRight, Filter, Download, RefreshCw, Droplet, Info } from "lucide-react"
+import { WaterBalanceTable } from "./water-balance-table"
+import { realWaterData, calculateWaterMetrics } from "@/lib/real-data"
 
 // Main App Component
 const MuscatBayWaterSystem = () => {
@@ -136,6 +30,7 @@ const MuscatBayWaterSystem = () => {
   const [selectedZone, setSelectedZone] = useState("Zone_05")
   const [selectedType, setSelectedType] = useState("All Types")
   const [isLoading, setIsLoading] = useState(true)
+  const [showMethodology, setShowMethodology] = useState(false)
 
   // Calculated metrics
   const [metrics, setMetrics] = useState({
@@ -150,23 +45,6 @@ const MuscatBayWaterSystem = () => {
   })
 
   // --- Color Scheme Definition ---
-  // (Color definitions remain the same as the previous version)
-  const primaryDarkBg = "bg-slate-800"
-  const primaryDarkBgAccent = "bg-slate-700"
-  const primaryDarkBgHover = "hover:bg-slate-600"
-  const primaryDarkText = "text-slate-100"
-  const primaryDarkTextAccent = "text-slate-300"
-  const primaryDarkBorder = "border-slate-600"
-  const primaryText = "text-slate-700"
-  const primaryTextHover = "hover:text-slate-900"
-  const primaryFill = "fill-slate-700"
-  const primaryStroke = "stroke-slate-700"
-  const secondaryLightBg = "bg-teal-50"
-  const secondaryLightBgHover = "hover:bg-teal-100"
-  const secondaryText = "text-teal-700"
-  const secondaryBorder = "border-teal-200"
-  const secondaryFill = "fill-teal-500"
-  const secondaryStroke = "stroke-teal-500"
   const alertColor = "#ef4444"
   const warningColor = "#f59e0b"
   const successColor = "#10b981"
@@ -175,22 +53,17 @@ const MuscatBayWaterSystem = () => {
   const indigoColor = "#6366f1"
   const COLORS = ["#96CDD2", "#6F697B", "#A8D9DF", "#857D93", "#C3E6EB", "#514D5E"]
   const LOSS_COLORS = { high: "#E57373", medium: "#FFA726", good: "#81C784" }
-  const waterPieColors = ["#475569", "#94a3b8", "#cbd5e1", "#e2e8f0", "#f1f5f9"]
 
   // Effect to load and process data
   useEffect(() => {
     const loadData = async () => {
       setIsLoading(true)
       try {
-        // Instead of trying to read from the file system, use mock data
-        console.log("Using mock data since file system access is not available")
-
-        // Generate mock data
-        const mockData = generateMockData()
-        setData(mockData)
+        // Use real data
+        setData(realWaterData)
 
         // Calculate metrics
-        const calculatedMetrics = calculateMetrics(mockData, selectedMonth, selectedYear)
+        const calculatedMetrics = calculateWaterMetrics(realWaterData, selectedMonth, selectedYear)
         setMetrics(calculatedMetrics)
 
         setIsLoading(false)
@@ -204,796 +77,40 @@ const MuscatBayWaterSystem = () => {
     loadData()
   }, [selectedYear, selectedMonth])
 
-  // Add the generateMockData function directly in the component
-  // This replaces the external file system dependency
-  const generateMockData = () => {
-    // This function now implements the exact calculation logic from the provided data
-    const mockData = []
-
-    // L1 Main Bulk meter (NAMA)
-    mockData.push({
-      Label: "L1",
-      "Meter Label": "Main Bulk (NAMA)",
-      "Acct #": "C43659",
-      Zone: "Main Bulk",
-      Type: "Bulk",
-      "Parent Meter": "",
-      "Jan-24": 32803,
-      "Feb-24": 27996,
-      "Mar-24": 23860,
-      "Apr-24": 31869,
-      "May-24": 30737,
-      "Jun-24": 41953,
-      "Jul-24": 35166,
-      "Aug-24": 35420,
-      "Sep-24": 41341,
-      "Oct-24": 31519,
-      "Nov-24": 35290,
-      "Dec-24": 36733,
-      "Jan-25": 32580,
-      "Feb-25": 44043,
-      "Mar-25": 34915,
-    })
-
-    // L2 Zone Bulk meters
-    const zones = ["Zone_01", "Zone_03A", "Zone_03B", "Zone_05", "Zone_08", "Zone_VS"]
-    const zoneConsumption = {
-      Zone_01: {
-        "Jan-24": 1595,
-        "Feb-24": 1283,
-        "Mar-24": 1255,
-        "Apr-24": 1383,
-        "May-24": 1411,
-        "Jun-24": 2078,
-        "Jul-24": 2601,
-        "Aug-24": 1638,
-        "Sep-24": 1550,
-        "Oct-24": 2098,
-        "Nov-24": 1808,
-        "Dec-24": 1946,
-        "Jan-25": 2008,
-        "Feb-25": 1740,
-        "Mar-25": 1880,
-      },
-      Zone_03A: {
-        "Jan-24": 1234,
-        "Feb-24": 1099,
-        "Mar-24": 1297,
-        "Apr-24": 1892,
-        "May-24": 2254,
-        "Jun-24": 2227,
-        "Jul-24": 3313,
-        "Aug-24": 3172,
-        "Sep-24": 2698,
-        "Oct-24": 3715,
-        "Nov-24": 3501,
-        "Dec-24": 3796,
-        "Jan-25": 4235,
-        "Feb-25": 4273,
-        "Mar-25": 3591,
-      },
-      Zone_03B: {
-        "Jan-24": 2653,
-        "Feb-24": 2169,
-        "Mar-24": 2315,
-        "Apr-24": 2381,
-        "May-24": 2634,
-        "Jun-24": 2932,
-        "Jul-24": 3369,
-        "Aug-24": 3458,
-        "Sep-24": 3742,
-        "Oct-24": 2906,
-        "Nov-24": 2695,
-        "Dec-24": 3583,
-        "Jan-25": 3256,
-        "Feb-25": 2962,
-        "Mar-25": 3331,
-      },
-      Zone_05: {
-        "Jan-24": 4286,
-        "Feb-24": 3897,
-        "Mar-24": 4127,
-        "Apr-24": 4911,
-        "May-24": 2639,
-        "Jun-24": 4992,
-        "Jul-24": 5305,
-        "Aug-24": 4039,
-        "Sep-24": 2736,
-        "Oct-24": 3383,
-        "Nov-24": 1438,
-        "Dec-24": 3788,
-        "Jan-25": 4267,
-        "Feb-25": 4231,
-        "Mar-25": 3862,
-      },
-      Zone_08: {
-        "Jan-24": 2170,
-        "Feb-24": 1825,
-        "Mar-24": 2021,
-        "Apr-24": 2753,
-        "May-24": 2722,
-        "Jun-24": 3193,
-        "Jul-24": 3639,
-        "Aug-24": 3957,
-        "Sep-24": 3947,
-        "Oct-24": 4296,
-        "Nov-24": 3569,
-        "Dec-24": 3018,
-        "Jan-25": 1547,
-        "Feb-25": 1498,
-        "Mar-25": 2605,
-      },
-      Zone_VS: {
-        "Jan-24": 26,
-        "Feb-24": 19,
-        "Mar-24": 72,
-        "Apr-24": 60,
-        "May-24": 125,
-        "Jun-24": 277,
-        "Jul-24": 143,
-        "Aug-24": 137,
-        "Sep-24": 145,
-        "Oct-24": 63,
-        "Nov-24": 34,
-        "Dec-24": 17,
-        "Jan-25": 14,
-        "Feb-25": 12,
-        "Mar-25": 21,
-      },
-    }
-
-    // Add L2 Zone Bulk meters
-    zones.forEach((zone) => {
-      mockData.push({
-        Label: "L2",
-        "Meter Label": `${zone} Bulk`,
-        "Acct #":
-          zone === "Zone_01"
-            ? "4300346"
-            : zone === "Zone_03A"
-              ? "4300343"
-              : zone === "Zone_03B"
-                ? "4300344"
-                : zone === "Zone_05"
-                  ? "4300345"
-                  : zone === "Zone_08"
-                    ? "4300342"
-                    : zone === "Zone_VS"
-                      ? "4300335"
-                      : `${zone.slice(-2)}00001`,
-        Zone: zone,
-        Type: "Bulk",
-        "Parent Meter": "MAIN BULK",
-        ...zoneConsumption[zone],
-      })
-    })
-
-    // DC meters connected directly to L1
-    const dcMeters = [
-      {
-        "Meter Label": "Irrigation Tank 04 - (Z08)",
-        "Acct #": "4300294",
-        Type: "IRR_Servies",
-        "Jan-24": 764,
-        "Feb-24": 509,
-        "Mar-24": 440,
-        "Apr-24": 970,
-        "May-24": 1165,
-        "Jun-24": 1475,
-        "Jul-24": 782,
-        "Aug-24": 559,
-        "Sep-24": 0,
-        "Oct-24": 0,
-        "Nov-24": 0,
-        "Dec-24": 0,
-        "Jan-25": 0,
-        "Feb-25": 0,
-        "Mar-25": 0,
-      },
-      {
-        "Meter Label": "Sales Center Common Building",
-        "Acct #": "4300295",
-        Type: "MB_Common",
-        "Jan-24": 45,
-        "Feb-24": 46,
-        "Mar-24": 37,
-        "Apr-24": 35,
-        "May-24": 61,
-        "Jun-24": 32,
-        "Jul-24": 36,
-        "Aug-24": 28,
-        "Sep-24": 25,
-        "Oct-24": 41,
-        "Nov-24": 54,
-        "Dec-24": 62,
-        "Jan-25": 76,
-        "Feb-25": 68,
-        "Mar-25": 37,
-      },
-      {
-        "Meter Label": "Hotel Main Building",
-        "Acct #": "4300334",
-        Type: "Retail",
-        "Jan-24": 14012,
-        "Feb-24": 12880,
-        "Mar-24": 11222,
-        "Apr-24": 13217,
-        "May-24": 13980,
-        "Jun-24": 15385,
-        "Jul-24": 12810,
-        "Aug-24": 13747,
-        "Sep-24": 13031,
-        "Oct-24": 17688,
-        "Nov-24": 15156,
-        "Dec-24": 14668,
-        "Jan-25": 18048,
-        "Feb-25": 19482,
-        "Mar-25": 22151,
-      },
-      {
-        "Meter Label": "Irrigation- Controller UP",
-        "Acct #": "4300340",
-        Type: "IRR_Servies",
-        "Jan-24": 647,
-        "Feb-24": 297,
-        "Mar-24": 318,
-        "Apr-24": 351,
-        "May-24": 414,
-        "Jun-24": 1038,
-        "Jul-24": 1636,
-        "Aug-24": 1213,
-        "Sep-24": 1410,
-        "Oct-24": 1204,
-        "Nov-24": 124,
-        "Dec-24": 53,
-        "Jan-25": 0,
-        "Feb-25": 0,
-        "Mar-25": 0,
-      },
-      {
-        "Meter Label": "Irrigation- Controller DOWN",
-        "Acct #": "4300341",
-        Type: "IRR_Servies",
-        "Jan-24": 1124,
-        "Feb-24": 907,
-        "Mar-24": 773,
-        "Apr-24": 628,
-        "May-24": 601,
-        "Jun-24": 891,
-        "Jul-24": 1006,
-        "Aug-24": 742,
-        "Sep-24": 860,
-        "Oct-24": 1559,
-        "Nov-24": 171,
-        "Dec-24": 185,
-        "Jan-25": 159,
-        "Feb-25": 239,
-        "Mar-25": 283,
-      },
-    ]
-
-    // Add DC meters
-    dcMeters.forEach((meter) => {
-      mockData.push({
-        Label: "DC",
-        "Meter Label": meter["Meter Label"],
-        "Acct #": meter["Acct #"],
-        Zone: "Main Bulk",
-        Type: meter.Type,
-        "Parent Meter": "MAIN BULK",
-        ...meter,
-      })
-    })
-
-    // Add some L3 meters for each zone
-    // Zone 01 (FM) L3 meters
-    const zone01L3Meters = [
-      {
-        "Meter Label": "Building FM",
-        "Acct #": "4300296",
-        Type: "MB_Common",
-        "Jan-24": 34,
-        "Feb-24": 43,
-        "Mar-24": 22,
-        "Apr-24": 18,
-        "May-24": 27,
-        "Jun-24": 22,
-        "Jul-24": 32,
-        "Aug-24": 37,
-        "Sep-24": 34,
-        "Oct-24": 45,
-        "Nov-24": 30,
-        "Dec-24": 38,
-        "Jan-25": 37,
-        "Feb-25": 39,
-        "Mar-25": 49,
-      },
-      {
-        "Meter Label": "Building B1",
-        "Acct #": "4300300",
-        Type: "Retail",
-        "Jan-24": 258,
-        "Feb-24": 183,
-        "Mar-24": 178,
-        "Apr-24": 184,
-        "May-24": 198,
-        "Jun-24": 181,
-        "Jul-24": 164,
-        "Aug-24": 202,
-        "Sep-24": 184,
-        "Oct-24": 167,
-        "Nov-24": 214,
-        "Dec-24": 245,
-        "Jan-25": 228,
-        "Feb-25": 225,
-        "Mar-25": 235,
-      },
-    ]
-
-    // Zone 03A L3 meters
-    const zone03AL3Meters = [
-      {
-        "Meter Label": "Z3-42 (Villa)",
-        "Acct #": "4300002",
-        Type: "Residential (Villa)",
-        "Jan-24": 61,
-        "Feb-24": 33,
-        "Mar-24": 36,
-        "Apr-24": 47,
-        "May-24": 39,
-        "Jun-24": 42,
-        "Jul-24": 25,
-        "Aug-24": 20,
-        "Sep-24": 44,
-        "Oct-24": 57,
-        "Nov-24": 51,
-        "Dec-24": 75,
-        "Jan-25": 32,
-        "Feb-25": 46,
-        "Mar-25": 19,
-      },
-      {
-        "Meter Label": "Z3-31 (Villa)",
-        "Acct #": "4300052",
-        Type: "Residential (Villa)",
-        "Jan-24": 115,
-        "Feb-24": 105,
-        "Mar-24": 86,
-        "Apr-24": 81,
-        "May-24": 140,
-        "Jun-24": 135,
-        "Jul-24": 151,
-        "Aug-24": 258,
-        "Sep-24": 222,
-        "Oct-24": 37,
-        "Nov-24": 164,
-        "Dec-24": 176,
-        "Jan-25": 165,
-        "Feb-25": 133,
-        "Mar-25": 30,
-      },
-      {
-        "Meter Label": "Z3-74(3) (Building)",
-        "Acct #": "4300322",
-        Type: "Residential (Apart)",
-        "Jan-24": 0,
-        "Feb-24": 0,
-        "Mar-24": 0,
-        "Apr-24": 0,
-        "May-24": 0,
-        "Jun-24": 0,
-        "Jul-24": 0,
-        "Aug-24": 0,
-        "Sep-24": 0,
-        "Oct-24": 0,
-        "Nov-24": 0,
-        "Dec-24": 0,
-        "Jan-25": 0,
-        "Feb-25": 0,
-        "Mar-25": 0,
-      },
-    ]
-
-    // Zone 03B L3 meters
-    const zone03BL3Meters = [
-      {
-        "Meter Label": "Z3-12 (Villa)",
-        "Acct #": "4300076",
-        Type: "Residential (Villa)",
-        "Jan-24": 52,
-        "Feb-24": 95,
-        "Mar-24": 258,
-        "Apr-24": 55,
-        "May-24": 67,
-        "Jun-24": 111,
-        "Jul-24": 93,
-        "Aug-24": 120,
-        "Sep-24": 118,
-        "Oct-24": 178,
-        "Nov-24": 55,
-        "Dec-24": 67,
-        "Jan-25": 73,
-        "Feb-25": 59,
-        "Mar-25": 54,
-      },
-      {
-        "Meter Label": "Z3-4 (Villa)",
-        "Acct #": "4300078",
-        Type: "Residential (Villa)",
-        "Jan-24": 105,
-        "Feb-24": 90,
-        "Mar-24": 96,
-        "Apr-24": 106,
-        "May-24": 126,
-        "Jun-24": 122,
-        "Jul-24": 156,
-        "Aug-24": 150,
-        "Sep-24": 97,
-        "Oct-24": 171,
-        "Nov-24": 56,
-        "Dec-24": 111,
-        "Jan-25": 90,
-        "Feb-25": 55,
-        "Mar-25": 22,
-      },
-    ]
-
-    // Zone 05 L3 meters
-    const zone05L3Meters = [
-      {
-        "Meter Label": "Z5-17",
-        "Acct #": "4300001",
-        Type: "Residential (Villa)",
-        "Jan-24": 99,
-        "Feb-24": 51,
-        "Mar-24": 53,
-        "Apr-24": 62,
-        "May-24": 135,
-        "Jun-24": 140,
-        "Jul-24": 34,
-        "Aug-24": 132,
-        "Sep-24": 63,
-        "Oct-24": 103,
-        "Nov-24": 54,
-        "Dec-24": 148,
-        "Jan-25": 112,
-        "Feb-25": 80,
-        "Mar-25": 81,
-      },
-      {
-        "Meter Label": "Irrigation Tank 03 (Z05)",
-        "Acct #": "4300321",
-        Type: "IRR_Servies",
-        "Jan-24": 1223,
-        "Feb-24": 1016,
-        "Mar-24": 552,
-        "Apr-24": 808,
-        "May-24": 0,
-        "Jun-24": 347,
-        "Jul-24": 763,
-        "Aug-24": 0,
-        "Sep-24": 0,
-        "Oct-24": 0,
-        "Nov-24": 1,
-        "Dec-24": 0,
-        "Jan-25": 0,
-        "Feb-25": 0,
-        "Mar-25": 0,
-      },
-    ]
-
-    // Zone 08 L3 meters
-    const zone08L3Meters = [
-      {
-        "Meter Label": "Z8-12",
-        "Acct #": "4300196",
-        Type: "Residential (Villa)",
-        "Jan-24": 109,
-        "Feb-24": 148,
-        "Mar-24": 169,
-        "Apr-24": 235,
-        "May-24": 180,
-        "Jun-24": 235,
-        "Jul-24": 237,
-        "Aug-24": 442,
-        "Sep-24": 661,
-        "Oct-24": 417,
-        "Nov-24": 223,
-        "Dec-24": 287,
-        "Jan-25": 236,
-        "Feb-25": 192,
-        "Mar-25": 249,
-      },
-      {
-        "Meter Label": "Z8-18",
-        "Acct #": "4300289",
-        Type: "Residential (Villa)",
-        "Jan-24": 290,
-        "Feb-24": 212,
-        "Mar-24": 253,
-        "Apr-24": 418,
-        "May-24": 384,
-        "Jun-24": 478,
-        "Jul-24": 459,
-        "Aug-24": 410,
-        "Sep-24": 312,
-        "Oct-24": 196,
-        "Nov-24": 239,
-        "Dec-24": 149,
-        "Jan-25": 122,
-        "Feb-25": 111,
-        "Mar-25": 336,
-      },
-    ]
-
-    // Zone VS L3 meters
-    const zoneVSL3Meters = [
-      {
-        "Meter Label": "Irrigation Tank - VS",
-        "Acct #": "4300326",
-        Type: "IRR_Servies",
-        "Jan-24": 0,
-        "Feb-24": 0,
-        "Mar-24": 0,
-        "Apr-24": 2,
-        "May-24": 0,
-        "Jun-24": 157,
-        "Jul-24": 116,
-        "Aug-24": 71,
-        "Sep-24": 100,
-        "Oct-24": 0,
-        "Nov-24": 1,
-        "Dec-24": 0,
-        "Jan-25": 0,
-        "Feb-25": 0,
-        "Mar-25": 0,
-      },
-      {
-        "Meter Label": "Laundry Services (FF Shop No.593)",
-        "Acct #": "4300332",
-        Type: "Retail",
-        "Jan-24": 0,
-        "Feb-24": 1,
-        "Mar-24": 16,
-        "Apr-24": 49,
-        "May-24": 32,
-        "Jun-24": 34,
-        "Jul-24": 32,
-        "Aug-24": 47,
-        "Sep-24": 34,
-        "Oct-24": 45,
-        "Nov-24": 52,
-        "Dec-24": 31,
-        "Jan-25": 33,
-        "Feb-25": 25,
-        "Mar-25": 22,
-      },
-    ]
-
-    // Add L3 meters to the data
-    ;[
-      ...zone01L3Meters,
-      ...zone03AL3Meters,
-      ...zone03BL3Meters,
-      ...zone05L3Meters,
-      ...zone08L3Meters,
-      ...zoneVSL3Meters,
-    ].forEach((meter) => {
-      mockData.push({
-        Label: "L3",
-        "Meter Label": meter["Meter Label"],
-        "Acct #": meter["Acct #"],
-        Zone: meter["Meter Label"].includes("Z3-")
-          ? meter["Meter Label"].includes("Z3-7") && !meter["Meter Label"].includes("Z3-74")
-            ? "Zone_03B"
-            : "Zone_03A"
-          : meter["Meter Label"].includes("Z5-")
-            ? "Zone_05"
-            : meter["Meter Label"].includes("Z8-")
-              ? "Zone_08"
-              : meter["Meter Label"].includes("VS")
-                ? "Zone_VS"
-                : "Zone_01",
-        Type: meter.Type,
-        "Parent Meter": meter["Meter Label"].includes("Z3-")
-          ? "ZONE 3A (BULK ZONE 3A)"
-          : meter["Meter Label"].includes("Z5-")
-            ? "ZONE 5 (Bulk Zone 5)"
-            : meter["Meter Label"].includes("Z8-")
-              ? "BULK ZONE 8"
-              : meter["Meter Label"].includes("VS")
-                ? "Village Square (Zone Bulk)"
-                : "ZONE FM ( BULK ZONE FM )",
-        ...meter,
-      })
-    })
-
-    return mockData
-  }
-
-  // Process and clean the raw CSV data
-  const processData = (rawData, year, month) => {
-    // Fix column names and structure if needed
-    return rawData.map((row) => {
-      // Make sure we're using consistent keys
-      const processedRow = { ...row }
-
-      // For 2025 data, ensure consistent Label field
-      if (year === "2025" && !processedRow.Label && processedRow["Level "]) {
-        processedRow.Label = processedRow["Level "]
-      }
-
-      // For 2024 data, ensure consistent Label field
-      if (year === "2024" && !processedRow.Label && processedRow["Level "]) {
-        processedRow.Label = processedRow["Level "]
-      }
-
-      // Ensure Zone is consistent
-      if (!processedRow.Zone) {
-        processedRow.Zone = "Unknown"
-      }
-
-      // Map Meter Label and Acct # for consistency
-      processedRow.meterLabel = processedRow["Meter Label"]
-      processedRow.acctNum = processedRow["Acct #"]
-      processedRow.parentMeterLabel = processedRow["Parent Meter"]
-
-      return processedRow
-    })
-  }
-
-  // Calculate all metrics based on the processed data
-  const calculateMetrics = (data, month, year) => {
-    const monthKey = `${month}-${year.substring(2)}`
-
-    // Find L1 meter (Main Bulk)
-    const l1Meter = data.find((row) => row.Label === "L1")
-    const totalL1Supply = l1Meter ? l1Meter[monthKey] || 0 : 0
-
-    // Initialize variables
-    let totalL2Native = 0 // Sum of all L2 meters
-    let totalL3NativeExcl = 0 // Sum of all L3 meters (excluding Acct # 4300322)
-    let totalDC = 0 // Sum of all DC meters
-    const consumptionByType = {}
-    const zoneMetrics = {}
-
-    // Initialize zone metrics
-    data.forEach((row) => {
-      if (row.Zone && !zoneMetrics[row.Zone]) {
-        zoneMetrics[row.Zone] = {
-          l2Bulk: 0,
-          l3Sum: 0,
-          loss: 0,
-          lossPercentage: 0,
-        }
-      }
-    })
-
-    // Calculate sums
-    data.forEach((row) => {
-      const value = row[monthKey] || 0
-
-      // Skip problematic meter
-      if (row["Acct #"] === "4300322") return
-
-      // L2 meters
-      if (row.Label === "L2") {
-        totalL2Native += value
-
-        // Add to zone metrics
-        if (row.Zone) {
-          zoneMetrics[row.Zone].l2Bulk += value
-        }
-      }
-
-      // DC meters
-      if (row.Label === "DC") {
-        totalDC += value
-      }
-
-      // L3 meters (excluding Acct # 4300322)
-      if (row.Label === "L3" && row["Acct #"] !== "4300322") {
-        totalL3NativeExcl += value
-
-        // Add to consumption by type
-        if (row.Type) {
-          consumptionByType[row.Type] = (consumptionByType[row.Type] || 0) + value
-        }
-
-        // Add to zone metrics for L3
-        if (row.Zone) {
-          zoneMetrics[row.Zone].l3Sum += value
-        }
-      }
-    })
-
-    // Calculate L2 (Modified) and L3 (Modified) as per the provided definitions
-    const totalL2Modified = totalL2Native + totalDC
-    const totalL3Modified = totalL3NativeExcl + totalDC
-
-    // Calculate losses
-    const stage1Loss = totalL1Supply - totalL2Modified
-    const stage2Loss = totalL2Native - totalL3NativeExcl
-    const totalLoss = totalL1Supply - totalL3Modified
-
-    // Calculate zone losses
-    Object.keys(zoneMetrics).forEach((zone) => {
-      const { l2Bulk, l3Sum } = zoneMetrics[zone]
-      zoneMetrics[zone].loss = l2Bulk - l3Sum
-      zoneMetrics[zone].lossPercentage = l2Bulk > 0 ? ((l2Bulk - l3Sum) / l2Bulk) * 100 : 0
-    })
-
-    return {
-      totalL1Supply,
-      totalL2Volume: totalL2Modified, // Using the modified definition
-      totalL3Volume: totalL3Modified, // Using the modified definition
-      stage1Loss,
-      stage2Loss,
-      totalLoss,
-      stage1LossPercentage: totalL1Supply > 0 ? (stage1Loss / totalL1Supply) * 100 : 0,
-      stage2LossPercentage: totalL2Native > 0 ? (stage2Loss / totalL2Native) * 100 : 0,
-      totalLossPercentage: totalL1Supply > 0 ? (totalLoss / totalL1Supply) * 100 : 0,
-      consumptionByType,
-      zoneMetrics,
-      // Additional metrics for reference
-      totalL2Native,
-      totalL3NativeExcl,
-      totalDC,
-    }
-  }
-
   // Calculate loss trend data across months
   const calculateLossTrend = () => {
     const months =
       selectedYear === "2025"
         ? ["Jan-25", "Feb-25", "Mar-25"]
-        : ["Jan-24", "Feb-24", "Mar-24", "Apr-24", "May-24", "Jun-24"] // Add more 2024 months if data exists
+        : [
+            "Jan-24",
+            "Feb-24",
+            "Mar-24",
+            "Apr-24",
+            "May-24",
+            "Jun-24",
+            "Jul-24",
+            "Aug-24",
+            "Sep-24",
+            "Oct-24",
+            "Nov-24",
+            "Dec-24",
+          ]
 
     const trend = []
 
     months.forEach((period) => {
       // Calculate metrics for this period
-      const l1Meter = data.find((row) => row.Label === "L1")
-      const totalL1 = l1Meter ? l1Meter[period] || 0 : 0
-
-      let totalL2 = 0
-      let totalL3 = 0
-
-      data.forEach((row) => {
-        const value = row[period] || 0
-
-        // Skip problematic meter
-        if (row["Acct #"] === "4300322") return
-
-        if (row.Label === "L2") {
-          totalL2 += value
-        }
-
-        if (row.Label === "DC" && row["Parent Meter"] && row["Parent Meter"].toUpperCase().includes("MAIN BULK")) {
-          totalL2 += value
-        }
-
-        if (row.Label === "L3" || row.Label === "DC") {
-          totalL3 += value
-        }
-      })
-
-      const stage1Loss = totalL1 - totalL2
-      const stage2Loss = totalL2 - totalL3
-      const totalLoss = totalL1 - totalL3
-
-      const stage1LossPct = totalL1 > 0 ? (stage1Loss / totalL1) * 100 : 0
-      const stage2LossPct = totalL2 > 0 ? (stage2Loss / totalL2) * 100 : 0
-      const totalLossPct = totalL1 > 0 ? (totalLoss / totalL1) * 100 : 0
+      const periodMetrics = calculateWaterMetrics(data, period.substring(0, 3), period.substring(4, 6))
 
       trend.push({
         period,
-        stage1Loss,
-        stage2Loss,
-        totalLoss,
-        stage1LossPct,
-        stage2LossPct,
-        totalLossPct,
+        stage1Loss: periodMetrics.stage1Loss,
+        stage2Loss: periodMetrics.stage2Loss,
+        totalLoss: periodMetrics.totalLoss,
+        stage1LossPct: periodMetrics.stage1LossPercentage,
+        stage2LossPct: periodMetrics.stage2LossPercentage,
+        totalLossPct: periodMetrics.totalLossPercentage,
       })
     })
 
@@ -1096,37 +213,42 @@ const MuscatBayWaterSystem = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      {/* Data Source Note */}
-      <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-4">
-        <div className="flex">
-          <div className="flex-shrink-0">
-            <svg className="h-5 w-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
-              <path
-                fillRule="evenodd"
-                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </div>
-          <div className="ml-3">
-            <p className="text-sm text-blue-800">
-              <strong>Data Methodology:</strong> Using accurate water balance calculations where:
-              <br />
-              L1: Reading of the Main Bulk meter (NAMA)
-              <br />
-              L2 (Modified): Sum of all L2 meters + Sum of all DC meters
-              <br />
-              L3 (Modified): Sum of all L3 meters (excluding Acct # 4300322) + Sum of all DC meters
-              <br />
-              Stage 1 Loss: L1 - L2 (Modified)
-              <br />
-              Stage 2 Loss: Sum of L2 meters - Sum of L3 meters (excluding Acct # 4300322)
-              <br />
-              Total Loss: L1 - L3 (Modified)
-            </p>
+      {showMethodology && (
+        <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-4">
+          <div className="flex">
+            <div className="flex-shrink-0">
+              <svg className="h-5 w-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  fillRule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <p className="text-sm text-blue-800">
+                <strong>Data Methodology:</strong> Using accurate water balance calculations where:
+                <br />
+                L1: Reading of the single 'L1' meter (Main Bulk (NAMA), Acct # C43659).
+                <br />
+                L2 (Modified): Sum of all 'L2' meters + Sum of all 'DC' meters.
+                <br />
+                L3 (Modified): Sum of all 'L3' meters (excluding Acct # 4300322) + Sum of all 'DC' meters.
+                <br />
+                Stage 1 Loss: L1 - (Sum of 'L2' meters + Sum of 'DC' meters) which simplifies to L1 - L2 (Modified).
+                <br />
+                Stage 2 Loss: Sum of 'L2' meters - Sum of 'L3' meters (excluding Acct # 4300322).
+                <br />
+                Total Loss: L1 - (Sum of 'L3' meters (excluding Acct # 4300322) + Sum of all 'DC' meters) which
+                simplifies to L1 - L3 (Modified).
+              </p>
+            </div>
+            <button onClick={() => setShowMethodology(false)} className="ml-auto text-blue-500 hover:text-blue-700">
+              ✕
+            </button>
           </div>
         </div>
-      </div>
+      )}
 
       {/* Header */}
       <header className="bg-gradient-to-r from-[#96CDD2] to-[#6F697B] text-white shadow">
@@ -1137,6 +259,15 @@ const MuscatBayWaterSystem = () => {
           </div>
 
           <div className="flex items-center space-x-3">
+            {/* Info button */}
+            <button
+              className="flex items-center bg-white bg-opacity-20 border border-white border-opacity-30 rounded-md px-3 py-1.5 text-sm text-white hover:bg-opacity-30 focus:outline-none focus:ring-2 focus:ring-white"
+              onClick={() => setShowMethodology(!showMethodology)}
+            >
+              <Info className="h-4 w-4 mr-1.5" />
+              Methodology
+            </button>
+
             {/* Year selector */}
             <select
               className="bg-white bg-opacity-20 border border-white border-opacity-30 rounded-md px-3 py-1.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white"
@@ -2114,6 +1245,12 @@ const MuscatBayWaterSystem = () => {
                 </ul>
               </div>
             </div>
+
+            {/* Water Balance Table */}
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">Water Balance Table</h3>
+              <WaterBalanceTable year={selectedYear} />
+            </div>
           </div>
         )}
 
@@ -2320,14 +1457,6 @@ const MuscatBayWaterSystem = () => {
                 </div>
               </div>
             </div>
-          </div>
-        )}
-
-        {/* Water Balance Table */}
-        {activeTab === "loss" && (
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-lg font-semibold text-gray-800 mb-4">Water Balance Table</h3>
-            <WaterBalanceTable data={data} year={selectedYear} />
           </div>
         )}
       </main>
