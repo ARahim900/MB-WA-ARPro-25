@@ -7,7 +7,6 @@ import {
   type WaterMetrics,
   getRealWaterData,
   calculateRealMetrics,
-  calculateLossTrend,
 } from "@/lib/real-data-processor"
 
 interface WaterSystemContextType {
@@ -66,12 +65,16 @@ export const WaterSystemProvider: React.FC<WaterSystemProviderProps> = ({ childr
     const loadData = async () => {
       setIsLoading(true)
       try {
+        console.log("Loading water data...");
+        
         // Get real water data
         const waterData = getRealWaterData()
+        console.log("Loaded water data:", waterData.length, "records");
         setData(waterData)
 
         // Calculate metrics
         const calculatedMetrics = calculateRealMetrics(waterData, selectedMonth, selectedYear)
+        console.log("Calculated metrics:", calculatedMetrics);
         setMetrics(calculatedMetrics)
 
         setIsLoading(false)
@@ -114,7 +117,34 @@ export const WaterSystemProvider: React.FC<WaterSystemProviderProps> = ({ childr
 
   // Calculate loss trend
   const getLossTrend = () => {
-    return calculateLossTrend(data, selectedYear)
+    // Implement your loss trend calculation here
+    // This would calculate trends across multiple months
+    const months =
+      selectedYear === "2025"
+        ? ["Jan-25", "Feb-25", "Mar-25"]
+        : [
+            "Jan-24", "Feb-24", "Mar-24", "Apr-24", "May-24", "Jun-24",
+            "Jul-24", "Aug-24", "Sep-24", "Oct-24", "Nov-24", "Dec-24",
+          ]
+
+    const trend = []
+
+    months.forEach((period) => {
+      // Calculate metrics for this period
+      const periodMetrics = calculateRealMetrics(data, period.substring(0, 3), period.substring(4, 6))
+
+      trend.push({
+        period,
+        stage1Loss: periodMetrics.stage1Loss,
+        stage2Loss: periodMetrics.stage2Loss,
+        totalLoss: periodMetrics.totalLoss,
+        stage1LossPct: periodMetrics.stage1LossPercentage,
+        stage2LossPct: periodMetrics.stage2LossPercentage,
+        totalLossPct: periodMetrics.totalLossPercentage,
+      })
+    })
+
+    return trend
   }
 
   const value = {
